@@ -36,11 +36,17 @@ tr:nth-child(odd) {background-color: #7ebcd6;
 }
  
 .icon {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
+  padding: 30px;
+  font-size: 40px;
+  width: 60px;
   text-align: center;
   text-decoration: none;
+}
+
+.iconBlock {
+  postion: relative;
+  top: 100px;
+  right: 30px;
 }
 
 /* Facebook */
