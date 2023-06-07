@@ -30,7 +30,7 @@ h2 {
 .blockText {
   text-align: left;
 }
-
+ 
 /* alt colors in table */
 tr:nth-child(odd) {background-color: #7ebcd6;
 }
