@@ -76,4 +76,6 @@ label {
 
 #imgText {
   display: inline-block;
+  width: 800px;
+  padding-left: 20px;
 }
