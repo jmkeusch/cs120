@@ -34,4 +34,22 @@ h2 {
 /* alt colors in table */
 tr:nth-child(odd) {background-color: #7ebcd6;
 }
+ 
+.icon {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.icon-fb {
+  background: #3B5998;
+  color: #FFFFFF;
+}
+
+.icon-tw {
+  background: #55ACEE;
+  color: #FFFFFF;
+}
   
