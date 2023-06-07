@@ -73,7 +73,7 @@ label {
 }
 
 #imgText {
-  display: block;
+  display: inline-block;
   inline-size: 200px;
   padding-left: 20px;
 }
