@@ -67,3 +67,13 @@ label {
   height:20px;
   text-align:right;
 }
+
+.backImage {
+  display: block;
+  height: 400px;
+  width 300px;
+}
+
+#imgText {
+  display: inline-block;
+}
