@@ -69,11 +69,11 @@ label {
 }
 
 .backImage {
-  display: inline-block;
+  display: block;
 }
 
 #imgText {
-  display: inline-block;
+  display: block;
   inline-size: 200px;
   padding-left: 20px;
 }
