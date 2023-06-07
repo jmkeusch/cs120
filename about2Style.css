@@ -45,8 +45,8 @@ tr:nth-child(odd) {background-color: #7ebcd6;
 
 .iconBlock {
   postion: relative;
-  top: 100px;
-  right: 30px;
+  padding-top: 100px;
+  padding-right: 30px;
 }
 
 /* Facebook */
