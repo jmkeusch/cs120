@@ -35,4 +35,22 @@ h2 {
 tr:nth-child(odd) {background-color: #7ebcd6;
 }
  
-  
+.icon {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Facebook */
+.icon-fb {
+  background: #3B5998;
+  color: #FFFFFF;
+}
+
+/* Twitter */
+.icon.tw {
+  background: #55ACEE;
+  color: #FFFFFF;
+}
