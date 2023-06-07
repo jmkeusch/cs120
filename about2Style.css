@@ -35,19 +35,4 @@ h2 {
 tr:nth-child(odd) {background-color: #7ebcd6;
 }
  
-.icon {
-  position: relative;
-  top: 100px;
-  right: 30px;
-}
-
-.icon-fb {
-  background: #3B5998;
-  color: #FFFFFF;
-}
-
-.icon-tw {
-  background: #55ACEE;
-  color: #FFFFFF;
-}
   
