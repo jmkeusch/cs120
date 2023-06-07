@@ -67,9 +67,6 @@ label {
   height:20px;
   text-align:right;
 }
-input {
-  display: table-column;       
-}
 
 
 .backImage {
