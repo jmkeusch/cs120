@@ -70,6 +70,12 @@ label {
   text-align:right;
 }
 
+input {
+  display: inline-block;
+  width: 150px;
+  height: 50 px;
+}
+
   
 .backImage {
   display: inline-block;
