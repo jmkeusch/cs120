@@ -70,12 +70,10 @@ label {
 
 .backImage {
   display: inline-block;
-  height: 400px;
-  width 300px;
 }
 
 #imgText {
   display: inline-block;
-  width: 400px;
+  inline-size: 200px;
   padding-left: 20px;
 }
