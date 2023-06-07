@@ -32,6 +32,6 @@ h2 {
 }
 
 /* alt colors in table */
-tr:nth-child(odd) {color: #7ebcd6;
+tr:nth-child(odd) {background-color: #7ebcd6;
 }
   
