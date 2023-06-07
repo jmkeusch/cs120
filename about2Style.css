@@ -63,8 +63,6 @@ tr:nth-child(odd) {background-color: #7ebcd6;
 }
 
 label { 
-  width: 150px;
-  height:50px;
   text-align:right;
 }
 
