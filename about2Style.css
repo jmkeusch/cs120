@@ -25,3 +25,9 @@ h2 {
   width: 400px;
   border:  3px double #2A2F8F;
 }
+
+/*left-align border text*/
+.blockText {
+  text-align: left;
+}
+  
