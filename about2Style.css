@@ -15,3 +15,13 @@ h2 {
   color: #2A2F8F;
   margin-bottom:30px;
 }
+
+/*bordered list specs*/
+.borderedList {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  width: 400px;
+  border:  3px solid #2A2F8F;
+}
