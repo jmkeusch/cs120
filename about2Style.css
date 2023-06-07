@@ -62,20 +62,23 @@ tr:nth-child(odd) {background-color: #7ebcd6;
   color: #FFFFFF;
 }
 
+form  {display: table;      
+}
 label {
   display:inline-block;  
   height:20px;
   text-align:right;
+  display: table-cell;
+}
+input {
+  display: table-cell; 
+  align: left;         
 }
 
-form  {display: table;      }
-label {display: table-cell; }
-input {display: table-cell; }
 
 .backImage {
   display: inline-block;
 }
-
 #imgText {
   display: inline-block;
   inline-size: 200px;
