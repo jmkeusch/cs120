@@ -16,10 +16,6 @@ h2 {
   margin-bottom:30px;
 }
 
-#backImage {
-  background-image: url("https://somuchfoodblog.com/wp-content/uploads/2022/11/beef-bourguinon7.jpg.webp");
-}
-
 /*bordered list specs*/
 .borderBlock {
   display: block;
@@ -68,7 +64,6 @@ tr:nth-child(odd) {background-color: #7ebcd6;
 
 label {
   display:inline-block;  
-  width:150px;
   height:20px;
   text-align:right;
 }
