@@ -26,8 +26,11 @@ h2 {
   border:  3px double #2A2F8F;
 }
 
-/*left-align border text*/
+/*align block text in border*/
 .blockText {
   text-align: left;
+}
+.blockTitle {
+  text-align: center !important;
 }
   
