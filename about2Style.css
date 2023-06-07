@@ -31,4 +31,7 @@ h2 {
   text-align: left;
 }
 
+/* alt colors in table */
+tr:nth-child(odd) {color: #7ebcd6;
+}
   
