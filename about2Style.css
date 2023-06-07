@@ -44,7 +44,8 @@ tr:nth-child(odd) {background-color: #7ebcd6;
 }
 
 .iconBlock {
-  postion: relative;
+  display: block;
+  float: right;
   padding-top: 100px;
   padding-right: 30px;
 }
@@ -59,4 +60,11 @@ tr:nth-child(odd) {background-color: #7ebcd6;
 .icon.tw {
   background: #55ACEE;
   color: #FFFFFF;
+}
+
+label {
+  display:block; 
+  width:x; 
+  height:y; 
+  text-align:right;
 }
