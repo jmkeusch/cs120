@@ -68,6 +68,10 @@ label {
   text-align:right;
 }
 
+form  {display: table;      }
+label {display: table-cell; }
+input {display: table-cell; }
+
 .backImage {
   display: inline-block;
 }
