@@ -7,12 +7,12 @@
     <script>
         var tempF = prompt('Please enter a temperature in degrees Fahrenheit');
         var tempC = (tempF - 32) * (5/9);
-        tempC = tempC.toFixed(2);
+        tempC = tempC.toFixed(1);
         alert(tempF + " degrees Fahrenheit is " + tempC + " degrees Celsius");
 
         tempC = prompt("Please enter a tempreature in degrees Celsius");
         tempF = ((tempC * (9/5)) + 32);
-        tempF = tempF.toFixed(2);
+        tempF = tempF.toFixed(1);
         alert(tempC + " degrees Celsius is " + tempF + " degrees Fahrenheit");
     </script>
   </body>
