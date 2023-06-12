@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JavaScript Unit 2 Problem Sets</title>
-  </head>
-  <body>
-    <script>
+    <title>JavaScript Unit 2 Problem Set | Problem 4</title>
+      <script> 
         var num1 = prompt("Enter a number (begin range)");
         var num2 = prompt("Enter another number (end range)");
+        var sum = null;
 
         for (let i = num1; i < num2; i++) {
           if (i % 2 != 0) {
-            alert(i + " ");
+            sum = sum + i;
+            document.getElementById("odds").innerHTML = i + " ";
           }
         }
-    </script>
+        document.getElementById("sum").innerHTML = "Sum of odd numbers in range is: " + sum; 
+      </script>
+    
+  </head>
+  <body>
+    <p id="odds"></p> <br>
+    <p id="sum"></p>
   </body>
 </html>
 
