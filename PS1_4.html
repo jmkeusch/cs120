@@ -6,22 +6,18 @@
         var num1 = prompt("Enter a number (begin range)");
         var num2 = prompt("Enter another number (end range)");
         var sum = 0;
-
-        for (let i = num1; i < num2; i++) {
+        document.print("Odd numbers in this range include: " <br>);
+        for (let i = num1; i <= num2; i++) {
           if (i % 2 != 0) {
             sum = sum + i;
             document.write(i + " ");
           }
         }
-        document.write("Sum of odd numbers in range is: " + sum);
+        document.write("The sum of odd numbers in range is: " + sum);
       </script>
     
   </head>
   <body>
-    <p>
-      Test paragraph
-    </p> <br>
-    <p></p>
   </body>
 </html>
 
