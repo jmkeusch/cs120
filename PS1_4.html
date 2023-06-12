@@ -9,14 +9,18 @@
       var num2 = prompt("Enter another number (end range)");
       var sum = 0;
 
+      parsedInt(num1, 10);
+      parsedInt(num2, 10);
+      parsedInt(sum, 10);
+
       document.write("Odd numbers in this range include: { ");
       for (let i = num1; i <= num2; i++) {
+        sum = sum + i;
         if (i % 2 != 0) {
-          sum = sum + i;
           document.write(i + " ");
         }
       }
-      document.write("}. <br> <br> The sum of odd numbers in this range is: " + sum);
+      document.write("}. <br> <br> The sum of all numbers in this range is: " + sum);
     </script>
   </body>
 </html>
