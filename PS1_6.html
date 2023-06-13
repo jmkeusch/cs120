@@ -8,10 +8,9 @@
       const MAX = 10;
       
       function count(array, num) {
-        document.write("check 2");
         var tally = 0;
         for (let i = 0; i < MAX; i++) {
-          if (num < array[i]) {
+          if (array[i] < num) {
             tally = tally + 1;
           }
         }
@@ -21,7 +20,6 @@
       }
 
       function createArray(num) {
-        document.write("check 1");
         //Init array
         const array = [];
         document.write("[");
@@ -38,10 +36,6 @@
       var num = Number(prompt("Enter a number"));
       
       createArray(num);
-      
-
-      
-  
       
     </script>
   </body>
