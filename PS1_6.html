@@ -14,29 +14,29 @@
             tally = tally + 1;
           }
         }
-        document.write("Your number is: " + num + "<br> <br>");
-        document.write("Tally is " + tally + "<br> <br>");
+        
         return tally;
       }
 
       function createArray(num) {
         //Init array
         const array = [];
-        document.write("[");
+        document.write("[ ");
         for (let i = 1; i < MAX; i++) {
           var elt = Math.floor(Math.random() * 99);
           array.push(elt);
           document.write(elt + " ");
         }
-        document.write("]");
+        document.write("] <br> <br> ");
 
-        count(array, num);
+        document.write(count(array, num));
       }
+
       //Execution
       var num = Number(prompt("Enter a number"));
-      
+      document.write("You entered: " + num + "<br> <br>");
       createArray(num);
-      
+
     </script>
   </body>
 </html>
