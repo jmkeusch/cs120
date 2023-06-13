@@ -8,25 +8,25 @@
       const MAX = 10;
       
       function count(array, num) {
-        document.write("check 2 <br> <br>");
+        document.write("check 2");
         var tally = 0;
         for (let i = 0; i < MAX; i++) {
           if (num < array[i]) {
-            tally = tally + 1;
+            tally++;
           }
         }
-        document.write("Tally is: " + tally);
+        
+        return tally;
       }
 
       function createArray(num) {
-        document.write("check 1 <br> <br> ");
+        document.write("check 1");
         const array = [];
         for (let i = 1; i < MAX; i++) {
-          var elt = Math.floor(Math.random() * 99);
+          var elt = Math.floor(Math.random() * 999);
           array.push(elt);
         }
         array.forEach(document.write(this));
-        document.write("<br> <br>");
         count(array, num);
       }
       var num = prompt("Enter a number");
