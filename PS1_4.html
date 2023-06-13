@@ -6,9 +6,11 @@
   <body>
     <script> 
       var num1 = prompt("Enter a number (begin range)");
+      alert(typeof num1);
       var num2 = prompt("Enter another number (end range)");
       var sum = 0;
       parseInt(num1);
+      alert(typeof num1);
       parseInt(num2);
       parseInt(sum);
       
@@ -17,7 +19,7 @@
       for (let i = num1; i <= num2; i++) {
         sum = sum + i;
         if (i % 2 != 0) {
-          document.write(i + ", ");
+          document.write(i + " ");
         }
       }
       parseInt(sum, 10);
