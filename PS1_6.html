@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Unit 2 Problem Set | Problem 6</title>
+  </head>
+  <body>
+    <script> 
+      function count(array, num) {
+        document.write("check 2");
+      }
+
+      function createArray(num) {
+        document.write("check 1");
+        const array = [];
+        for (let i = 1; i < 10; i++) {
+          var elt = Math.floor(Math.random() * 999);
+          array.push(elt);
+        }
+        count(array, num);
+      }
+      var num = prompt("Enter a number");
+      parseInt(num, 10);
+      
+      createArray(num);
+      
+
+      
+  
+      
+    </script>
+  </body>
+</html>
+
