@@ -5,11 +5,10 @@
   </head>
   <body>
     <script> 
-      var num1 = prompt("Enter a number (begin range)");
-      var num2 = prompt("Enter another number (end range)");
-      var sum = 0;
-      parseInt(sum, 10);
-      
+      const num1 = prompt("Enter a number (begin range)");
+      const num2 = prompt("Enter another number (end range)");
+      const sum = 0;
+
       document.write("Odd numbers in this range include: { ");
       for (let i = num1; i <= num2; i++) {
         sum = sum + i;
@@ -17,7 +16,8 @@
           document.write(i + " ");
         }
       }
-      document.write("}. <br> <br> The sum of all numbers in this range is: " + sum);
+      document.write("}. <br> <br> The sum of all numbers in this range is: " + 
+                                                             parseInt(sum,10));
     </script>
   </body>
 </html>
