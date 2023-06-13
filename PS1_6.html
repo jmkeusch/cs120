@@ -22,15 +22,18 @@
 
       function createArray(num) {
         document.write("check 1");
+        //Init array
         const array = [];
         for (let i = 1; i < MAX; i++) {
           var elt = Math.floor(Math.random() * 99);
           array.push(elt);
         }
+
+        document.write("check 1.2");
         array.forEach(document.write(this));
         count(array, num);
       }
-      <!--Execution-->
+      //Execution
       var num = Number(prompt("Enter a number"));
       
       createArray(num);
