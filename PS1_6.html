@@ -12,10 +12,11 @@
         var tally = 0;
         for (let i = 0; i < MAX; i++) {
           if (num < array[i]) {
-            tally++;
+            tally = tally + 1;
           }
         }
         
+        document.write("Tally is " + tally + "<br> <br>");
         return tally;
       }
 
@@ -23,14 +24,14 @@
         document.write("check 1");
         const array = [];
         for (let i = 1; i < MAX; i++) {
-          var elt = Math.floor(Math.random() * 999);
+          var elt = Math.floor(Math.random() * 99);
           array.push(elt);
         }
         array.forEach(document.write(this));
         count(array, num);
       }
-      var num = prompt("Enter a number");
-      parseInt(num, 10);
+      <!--Execution-->
+      var num = Number(prompt("Enter a number"));
       
       createArray(num);
       
