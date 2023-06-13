@@ -6,7 +6,7 @@
   <body>
     <script> 
       const MAX = 10;
-      
+      //Count function
       function count(array, num) {
         var tally = 0;
         for (let i = 0; i < MAX; i++) {
@@ -14,12 +14,11 @@
             tally = tally + 1;
           }
         }
-        
         return tally;
       }
-
+      //create array function
       function createArray(num) {
-        //Init array
+        //Initialize array
         const array = [];
         document.write("[ ");
         for (let i = 1; i < MAX; i++) {
@@ -34,7 +33,9 @@
 
       //Execution
       var num = Number(prompt("Enter a number"));
+
       document.write("You entered: " + num + "<br> <br>");
+
       createArray(num);
 
     </script>
