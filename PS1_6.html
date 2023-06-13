@@ -24,13 +24,14 @@
         document.write("check 1");
         //Init array
         const array = [];
+        document.write("[");
         for (let i = 1; i < MAX; i++) {
           var elt = Math.floor(Math.random() * 99);
           array.push(elt);
+          document.write(elt + " ");
         }
+        document.write("]");
 
-        document.write("check 1.2");
-        array.forEach(document.write(this));
         count(array, num);
       }
       //Execution
