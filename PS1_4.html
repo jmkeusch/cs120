@@ -7,11 +7,13 @@
     <script> 
       var num1 = prompt("Enter a number (begin range)");
       var num2 = prompt("Enter another number (end range)");
+      parseInt(num1, 10);
+      parseInt(num2, 10);
       var sum = 0;
 
       document.write("Odd numbers in this range include: { ");
       for (let i = num1; i <= num2; i++) {
-        sum++;
+        sum = sum + i;
         if (i % 2 != 0) {
           document.write(i + " ");
         }
