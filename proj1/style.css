@@ -1,0 +1,16 @@
+html * {
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+        
+/* headers */
+h1 {
+  font-size:45px;
+  color: #2A2F8F;
+  margin-bottom:30px;
+}
+h2 {
+  font-size:40px;
+  color: #2A2F8F;
+  margin-bottom:30px;
+}
