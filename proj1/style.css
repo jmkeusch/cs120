@@ -4,6 +4,11 @@ html * {
 }
         
 /* headers */
+.header {
+  padding-top: 50px;
+  font-size: 20px;
+  text-align: center;
+}
 h1 {
   font-size:45px;
   color: #2A2F8F;
