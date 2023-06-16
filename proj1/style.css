@@ -139,7 +139,15 @@ input, select {
   box-sizing: border-box;
 }
 
-
+input[type=button] {
+  background-color: #436A7B;
+  border: none;
+  color: #FFFFFF;
+  padding: 12px 24px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
 /*Responsiveness*/
 @media screen and (max-width: 500px) {
