@@ -15,12 +15,14 @@ html * {
 }
 .bgImage {
   background-image: url('https://images.squarespace-cdn.com/content/v1/6081023e3e572a45a3d21f04/1626261568296-192V6WR02WB1TGJ0JAH7/Mamisa-String-Quartet.jpg?format=2500w');
-  background-size: cover;
-  background-position: center bottom;
-  background-attachment: fixed;
-  width: 100%;
-  height: auto;
+  height: 400px;
   max-height: 400px;
+  width: 100%;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: local;
+  background-repeat: no-repeat;
   resize: both;
 }
 h1 {
