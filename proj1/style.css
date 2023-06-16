@@ -87,8 +87,12 @@ li.nav {
   color: #FFFFFF;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
   font-size: 15px;
+  text-decoration: none;
+  position: sticky;
+  position: -webkit-sticky;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* NavBar Option Hover effect */
 .navBar a:hover {
