@@ -9,7 +9,7 @@ html * {
 .header {
   font-family: "Italiana";
   padding-top: 15px;
-  font-size: 20px;
+  font-size: 80px;
   color: #FFFFFF;
   text-align: center;
 }
@@ -52,18 +52,19 @@ hr.solid {
 }
 
 /*Navigation Menu*/
-.navMenu {
+ul.navMenu {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   float: center;
+  display: inline-block;
   background-color: #A87347;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
 }
-.navOpt {
+li.nav {
   display: block;
   padding: 10px 14px;
   text-align: center;
