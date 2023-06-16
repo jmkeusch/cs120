@@ -120,8 +120,6 @@ li.nav {
 span.left {
   display: inline-block;
   inline-size: 200px;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 span.right {
