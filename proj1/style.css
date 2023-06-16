@@ -9,7 +9,8 @@ html * {
 .header {
   font-family: "Italiana";
   padding-top: 0px;
-  font-size: 80px;
+  margin: 0px;
+  font-size: 70px;
   color: #FFFFFF;
   text-align: center;
 }
@@ -106,21 +107,21 @@ li.nav {
 }
 
 /*Image Style*/
-
 .bodyImage {
   width: 60px;
   height: 40px;
   display: inline;
 }
 
+p.left {
+  float: left;
+  inline-size: 200px;
+  padding-right: 10px;
+}
+
 p.right {
-  display: inline-block;
+  float: right;
   inline-size: 200px;
   padding-left: 10px;
 }
 
-p.left {
-  display: inline-block;
-  inline-size: 200px;
-  padding-right: 10px;
-}
