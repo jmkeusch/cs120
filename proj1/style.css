@@ -45,3 +45,16 @@ footer {
   margin-top: 20px;
   margin-bottom: 10px;
 }
+
+.navMenu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: center;
+}
+.navOption {
+  display: block;
+  padding: 8px;
+  background-color: #A87347;
+}
+
