@@ -139,7 +139,7 @@ input, select {
   box-sizing: border-box;
 }
 
-input[type=button] {
+input[type=submit] {
   background-color: #436A7B;
   border: none;
   color: #FFFFFF;
