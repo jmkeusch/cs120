@@ -8,6 +8,7 @@ html * {
 
 #justify {
   text-align: justify !important;
+  text-justify: auto;
 }
 
         
