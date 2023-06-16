@@ -18,6 +18,7 @@ html * {
   max-height: 300px;
   height:300px;
   width: 100%;
+  background-color: #000000;
   background-size: contain;
   background-position-x: center;
   background-position-y: top;
@@ -65,7 +66,7 @@ ul.navMenu {
 }
 li.nav {
   display: block;
-  padding: 10px 14px;
+  padding: 20px 14px;
   text-align: center;
   color: #FFFFFF;
 }
@@ -73,6 +74,9 @@ li.nav {
 .navBar {
   overflow: hidden;
   background-color: #A87347;
+  float: center;
+  position: sticky;
+  position: -webkit-sticky;
 }
 
 .navBar a {
