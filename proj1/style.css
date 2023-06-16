@@ -29,16 +29,22 @@ html * {
   resize: both;
 }
 h1 {
-  font-family: "Italiana", sans-serif;
+  font-family: "Italiana";
   font-size: 40px;
   color: #A87347;
   margin-bottom: 10px;
 }
 h2 {
-  font-family: "Italiana", sans-serif;
+  font-family: "Italiana";
   font-size: 32px;
   color: #436A7B;
   margin-bottom: 10px;
+}
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 5px;
 }
 
 /* footer */
