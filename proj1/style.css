@@ -169,11 +169,6 @@ button:hover {
   .bgImage {
     background-size: cover;
   }
-  div {
-    display: block;
-    float: left;
-    margin-left: 1px;
-  }
   #border {
     max-width: 100%;
   }
