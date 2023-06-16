@@ -139,7 +139,7 @@ input, select {
   box-sizing: border-box;
 }
 
-input[type="button"] {
+button {
   background-color: #436A7B;
   border: none;
   color: #FFFFFF;
@@ -151,7 +151,7 @@ input[type="button"] {
 }
 
 /* NavBar Option Hover effect */
-input:hover {
+button:hover {
   background-color: #A87347;
   color: #FFFFFF;
 }
