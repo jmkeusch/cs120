@@ -50,12 +50,17 @@ footer {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  overflow: hidden;
   float: center;
-  color: #436A7B;
+  background-color: #A87347;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
-.navOption {
+.navOpt {
   display: block;
-  padding: 8px;
-  background-color: #FFFFFF;
+  padding: 10px 14px;
+  text-align: center;
+  color: #FFFFFF;
 }
 
