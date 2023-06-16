@@ -106,6 +106,7 @@ hr.solid {
   display: inline-block;
 }
 
+/*Responsiveness*/
 @media screen and (max-width: 500px) {
   .bodyImage {
     display: block;
