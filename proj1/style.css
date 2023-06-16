@@ -14,20 +14,25 @@ html * {
   background-image: url('https://images.squarespace-cdn.com/content/v1/6081023e3e572a45a3d21f04/1626261568296-192V6WR02WB1TGJ0JAH7/Mamisa-String-Quartet.jpg?format=2500w');
   background-size: cover;
   background-position: center top;
-  max-width: 100%;
   width: 100%;
-  height: auto;
+  max-height: 400px;
   resize: both;
-  overflow: scroll;
 }
-
 h1 {
-  font-size:40px;
+  font-size: 40px;
   color: #436A7B;
-  margin-bottom:30px;
+  margin-bottom: 10px;
 }
 h2 {
-  font-size:32px;
+  font-size: 32px;
   color: #A55102;
-  margin-bottom:30px;
+  margin-bottom: 10px;
+}
+
+/*footer*/
+footer {
+  font-size: 10px;
+  position: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
