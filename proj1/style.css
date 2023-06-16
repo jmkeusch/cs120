@@ -115,12 +115,14 @@ li.nav {
 
 p.left {
   float: left;
+  display: inline;
   inline-size: 200px;
   padding-right: 10px;
 }
 
 p.right {
   float: right;
+  display: inline;
   inline-size: 200px;
   padding-left: 10px;
 }
