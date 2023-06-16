@@ -114,13 +114,13 @@ li.nav {
   display: inline-block;
 }
 
-p.left {
+span.left {
   display: inline-block;
   inline-size: 200px;
   padding-right: 10px;
 }
 
-p.right {
+span.right {
   display: inline-block;
   inline-size: 200px;
   padding-left: 10px;
