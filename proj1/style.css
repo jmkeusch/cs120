@@ -19,6 +19,7 @@ html * {
   background-position: center bottom;
   background-attachment: fixed;
   width: 100%;
+  height: auto;
   max-height: 400px;
   resize: both;
 }
