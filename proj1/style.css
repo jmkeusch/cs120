@@ -117,15 +117,9 @@ li.nav {
 
 }
 
-span.left {
+span.home {
   display: inline-block;
   inline-size: 200px;
-}
-
-span.right {
-  display: inline-block;
-  inline-size: 200px;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-right: 15px;
 }
 
