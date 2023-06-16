@@ -128,7 +128,7 @@ form {
 
 label {
   margin-right: 5px;
-  width: 200px;
+  width: 150px;
   display: inline-block;
 }
 input, select {
@@ -162,8 +162,8 @@ button:hover {
 /*Responsiveness*/
 @media screen and (max-width: 450px) {
   .bodyImage {
-    display: block;
-    float: none;
+    display: inline-block;
+    position: center;
   }
   .header {
     font-size: 40px;
