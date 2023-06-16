@@ -108,16 +108,18 @@ li.nav {
 
 /*Image Style*/
 .bodyImage {
-  max-width: 800px;
+  max-width: 600px;
   width: 100%;
   height: auto;
   display: inline-block;
+
 }
 
 span.left {
   display: inline-block;
   inline-size: 200px;
-  padding-right: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 span.right {
