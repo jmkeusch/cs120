@@ -56,7 +56,6 @@ footer {
   margin-left: auto;
   margin-bottom: 10px;
 }
-
 /* footer divider */
 hr.solid {
   border-top: 3px solid  #bbb;
@@ -66,11 +65,11 @@ hr.solid {
 .navBar {
   overflow: hidden;
   background-color: #A87347;
-  float: center;
   margin-left: auto;
   margin-right: auto;
   position: sticky;
-  position: -webkit-sticky;
+  float: center;
+  text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -82,8 +81,7 @@ hr.solid {
   padding: 20px 16px;
   font-size: 15px;
   text-decoration: none;
-  position: sticky;
-  position: -webkit-sticky;
+  /*position: sticky;*/
   margin-left: auto;
   margin-right: auto;
 }
