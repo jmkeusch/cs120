@@ -128,7 +128,7 @@ form {
 
 label {
   margin-right: 5px;
-  width: 40%;
+  width: 200px;
   display: inline-block;
 }
 input, select {
@@ -174,7 +174,7 @@ button:hover {
   #border {
     max-width: 100%;
   }
-  input, select {
+  input, select, label {
     width: 100%;
   }
 }
