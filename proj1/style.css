@@ -11,6 +11,9 @@ html * {
   text-justify: auto;
 }
 
+#content {
+  margin-left:10px;
+}
         
 /* headers */
 .header {
