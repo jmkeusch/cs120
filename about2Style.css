@@ -32,7 +32,8 @@ h2 {
 }
  
 /* alt colors in table */
-tr:nth-child(odd) {background-color: #7ebcd6;
+tr:nth-child(odd) {
+  background-color: #7ebcd6;
 }
  
 .icon {
@@ -66,7 +67,6 @@ label {
   text-align:right;
 }
 
-  
 .backImage {
   display: inline-block;
 }

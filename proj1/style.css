@@ -8,7 +8,7 @@ html * {
 /* headers */
 .header {
   font-family: "Italiana";
-  padding-top: 10px;
+  padding-top: 0px;
   font-size: 80px;
   color: #FFFFFF;
   text-align: center;
@@ -98,3 +98,21 @@ li.nav {
   color: #FFFFFF;
 }
 
+/*Image Style*/
+
+.bodyImage {
+  width: 100px;
+  height: 90px;
+}
+
+#textRight {
+  display: inline-block;
+  inline-size: 200px;
+  padding-left: 10px;
+}
+
+#textLeft {
+  display: inline-block;
+  inline-size: 200px;
+  padding-right: 10px;
+}
