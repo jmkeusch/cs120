@@ -111,6 +111,24 @@ hr.solid {
   display: inline-block;
 }
 
+/*Form Style*/
+#border {
+  border: 2px solid;
+  border-color: #436A7B'
+}
+
+input, select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+
 /*Responsiveness*/
 @media screen and (max-width: 500px) {
   .bodyImage {
