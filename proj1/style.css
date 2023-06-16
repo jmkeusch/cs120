@@ -72,7 +72,7 @@ hr.solid {
   background-color: #A87347;
   margin-left: auto;
   margin-right: auto;
-  position: sticky;
+  position: sticky !important;
   float: center;
   text-align: center;
   padding-top: 10px;
