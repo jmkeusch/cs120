@@ -71,14 +71,17 @@ li.nav {
   color: #FFFFFF;
 } */
 
+/* NavBar Block */
 .navBar {
   overflow: hidden;
   background-color: #A87347;
   float: center;
+  margin-left: auto;
+  margin-right: auto;
   position: sticky;
   position: -webkit-sticky;
 }
-
+/* NavBar Option */
 .navBar a {
   float: center;
   color: #FFFFFF;
@@ -87,12 +90,12 @@ li.nav {
   text-decoration: none;
   font-size: 15px;
 }
-
+/* NavBar Option Hover effect */
 .navBar a:hover {
   background-color: #436A7B;
   color: #FFFFFF;
 }
-
+/* NavBar Option active on-page */
 .navBar a.active {
   background-color: #436A7B;
   color: #FFFFFF;
