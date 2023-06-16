@@ -118,7 +118,7 @@ hr.solid {
 #border {
   border: 3px solid;
   border-color: #436A7B;
-  max-width: 40%;
+  width: 40%;
 }
 
 form {
@@ -169,7 +169,10 @@ input:hover {
     background-size: cover;
   }
   div {
-    display: block;
-    float: center;
+    display: block !important;
+    float: left !important;
+  }
+  #border {
+    max-width: 100%;
   }
 }
