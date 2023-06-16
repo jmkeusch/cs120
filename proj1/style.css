@@ -171,6 +171,7 @@ input:hover {
   div {
     display: block !important;
     float: left !important;
+    margin-left: 1px;
   }
   #border {
     max-width: 100%;
