@@ -139,7 +139,7 @@ input, select {
   box-sizing: border-box;
 }
 
-input[type=submit] {
+input[type=button] {
   background-color: #436A7B;
   border: none;
   color: #FFFFFF;
@@ -148,6 +148,12 @@ input[type=submit] {
   margin: 4px 2px;
   cursor: pointer;
   align-items: center;
+}
+
+/* NavBar Option Hover effect */
+.navBar a:hover {
+  background-color: #A87347;
+  color: #FFFFFF;
 }
 
 /*Responsiveness*/
