@@ -132,7 +132,7 @@ label {
 input, select {
   max-width:40%;
   padding: 5px 5px;
-  margin: 8px 0;
+  margin: 8px 12px;
   display: inline-block;
   border: 1px solid;
   border-radius: 4px;
@@ -147,11 +147,11 @@ input[type=button] {
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
-  align-items: center;
+  position: center;
 }
 
 /* NavBar Option Hover effect */
-.navBar a:hover {
+input:hover {
   background-color: #A87347;
   color: #FFFFFF;
 }
@@ -167,5 +167,9 @@ input[type=button] {
   }
   .bgImage {
     background-size: cover;
+  }
+  div {
+    display: block;
+    float: center;
   }
 }
