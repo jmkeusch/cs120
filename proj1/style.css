@@ -117,7 +117,8 @@ hr.solid {
 /*Form Style*/
 #border {
   border: 3px solid;
-  border-color: #436A7B'
+  border-color: #436A7B;
+  max-width: 40%;
 }
 
 form {
