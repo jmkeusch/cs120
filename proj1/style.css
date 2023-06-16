@@ -8,14 +8,14 @@ html * {
 /* headers */
 .header {
   font-family: "Italiana";
-  padding-top: 0px;
+  padding-top: 15px;
   font-size: 20px;
   color: #FFFFFF;
   text-align: center;
 }
 .bgImage {
   background-image: url('https://images.squarespace-cdn.com/content/v1/6081023e3e572a45a3d21f04/1626261568296-192V6WR02WB1TGJ0JAH7/Mamisa-String-Quartet.jpg?format=2500w');
-  height: 400px;
+  max-height: 300px;
   width: 100%;
   background-size: cover;
   background-position-x: center;
@@ -50,10 +50,11 @@ footer {
   margin: 0;
   padding: 0;
   float: center;
+  color: #436A7B;
 }
 .navOption {
   display: block;
   padding: 8px;
-  background-color: #A87347;
+  background-color: #FFFFFF;
 }
 
