@@ -52,7 +52,7 @@ hr.solid {
   border-top: 3px solid  #bbb;
 }
 
-/* Navigation Menu */
+/* Navigation Menu 
 ul.navMenu {
   list-style-type: none;
   margin: 0;
@@ -69,7 +69,7 @@ li.nav {
   padding: 20px 14px;
   text-align: center;
   color: #FFFFFF;
-}
+} */
 
 .navBar {
   overflow: hidden;
@@ -81,7 +81,7 @@ li.nav {
 
 .navBar a {
   float: center;
-  color: #A87347;
+  color: #FFFFFF;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -106,13 +106,13 @@ li.nav {
   display: inline;
 }
 
-#textRight {
+p.right {
   display: inline-block;
   inline-size: 200px;
   padding-left: 10px;
 }
 
-#textLeft {
+p.left {
   display: inline-block;
   inline-size: 200px;
   padding-right: 10px;
