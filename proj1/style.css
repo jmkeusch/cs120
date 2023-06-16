@@ -5,12 +5,11 @@
 html * {
   font-family: "Roboto", sans-serif;
 }
-/*
+
 #justify {
   text-align: justify !important;
-  text-justify: inter-word;
 }
-*/
+
         
 /* headers */
 .header {
