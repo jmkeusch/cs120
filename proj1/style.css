@@ -46,6 +46,12 @@ footer {
   margin-bottom: 10px;
 }
 
+/*footer divider*/
+hr.solid {
+  border-top: 3px solid  #bbb;
+}
+
+/*Navigation Menu*/
 .navMenu {
   list-style-type: none;
   margin: 0;
