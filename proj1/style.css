@@ -148,6 +148,7 @@ button {
   margin: 4px 2px;
   cursor: pointer;
   position: center;
+  text-align: center;
 }
 
 /* NavBar Option Hover effect */
@@ -169,8 +170,8 @@ button:hover {
     background-size: cover;
   }
   div {
-    display: block !important;
-    float: left !important;
+    display: block;
+    float: left;
     margin-left: 1px;
   }
   #border {
