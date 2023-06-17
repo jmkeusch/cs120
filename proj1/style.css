@@ -162,10 +162,10 @@ button:hover {
 
 table {
   border: 2px solid;
-  border-collapse: collapse;
   border-color: #436A7B;
   width:40%;
   padding: 5px;
+  font-size: 15px;
   text-align: center;
   float:left;
 }
