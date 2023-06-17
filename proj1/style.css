@@ -150,7 +150,6 @@ button {
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
-  position: center;
   float: center;
   text-align: center;
 }
@@ -193,5 +192,9 @@ table {
   }
   input, select, label {
     width: 90%;
+  }
+  table {
+    max-width: 80%;
+    width: 80%;
   }
 }
