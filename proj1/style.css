@@ -151,6 +151,7 @@ button {
   margin: 4px 2px;
   cursor: pointer;
   position: center;
+  float: center;
   text-align: center;
 }
 
