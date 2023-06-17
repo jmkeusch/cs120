@@ -170,9 +170,10 @@ button:hover {
   }
   .bgImage {
     background-size: cover;
+    display: inline-block;
   }
   #border {
-    max-width: 100%;
+    width: 100%;
   }
   input, select, label {
     width: 100%;
