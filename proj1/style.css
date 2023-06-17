@@ -119,6 +119,7 @@ hr.solid {
   border: 3px solid;
   border-color: #436A7B;
   width: 40%;
+  display:flex;
 }
 
 form {
