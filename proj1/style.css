@@ -160,12 +160,24 @@ button:hover {
   color: #FFFFFF;
 }
 
+table {
+  border: 1px solid;
+  border-color: #436A7B;
+  width:20%;
+  text-align: center;
+  float:left;
+}
+
 /*Responsiveness*/
 @media screen and (max-width: 500px) {
+  html * {
+    font-size: 20px;
+  }
   .bodyImage {
     display: inline-block;
     position: center;
   }
+  
   .header {
     font-size: 40px;
   }
