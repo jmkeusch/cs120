@@ -163,7 +163,7 @@ button:hover {
 /*Responsiveness*/
 @media screen and (max-width: 600px) {
   .bodyImage {
-    display: block;
+    display: inline-block;
     position: center;
   }
   .header {
