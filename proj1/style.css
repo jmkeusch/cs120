@@ -154,6 +154,10 @@ button {
   position: center;
   text-align: center;
 }
+div.button {
+  text-align: center;
+  margin-left: 30px;
+}
 
 /* NavBar Option Hover effect */
 button:hover {
@@ -198,7 +202,8 @@ table {
     max-width: 80%;
     width: 80%;
   }
-  button {
-    margin-left:0px;
+  div.button {
+    text-align: center;
+    margin-left: 0px;
   }
 }
