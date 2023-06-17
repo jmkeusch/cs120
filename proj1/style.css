@@ -164,7 +164,7 @@ table {
   border: 2px solid;
   border-color: #436A7B;
   width:40%;
-  padding: 5px;
+  padding: 10px;
   font-size: 15px;
   text-align: center;
   float:left;
@@ -179,7 +179,6 @@ table {
     display: inline-block;
     position: center;
   }
-
   .header {
     font-size: 40px;
   }
@@ -193,5 +192,8 @@ table {
   }
   input, select, label {
     width: 90%;
+  }
+  table {
+    width: 80%
   }
 }
