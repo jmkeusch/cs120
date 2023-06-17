@@ -198,4 +198,7 @@ table {
     max-width: 80%;
     width: 80%;
   }
+  button {
+    margin-left:0px;
+  }
 }
