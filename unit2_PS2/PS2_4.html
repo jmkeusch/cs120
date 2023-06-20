@@ -5,11 +5,10 @@
     <title>JavaScript Unit 2 Problem Set 2 | Problem 3</title>
 
     <script language="javascript">
-      //window.onload="init()";
       window.onload = function speak() {
           //alert("in function");
           with (document.form1) {
-            btn1 = getElementById("btn1");
+            btn1 = document.getElementById("btn1");
             document.write("button 1: ");
             //txtName = document.form1.name.value;
             //btn1.onclick = function () {
@@ -22,7 +21,6 @@
           
       } //end speak
     </script>
-
   </head>
   <body>
     <form name="form1">
@@ -38,7 +36,5 @@
         <input type="button" id="btn3" value="Greetings" onclick="speak()">
       </div>
     </form>
-    <script>
-    </script>
   </body>
 </html>
