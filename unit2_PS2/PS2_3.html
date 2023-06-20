@@ -6,8 +6,9 @@
     <script language="javascript">
       function speak(prefix) {
         with(document.form1) {
+          var pre = prefix;
           txtName = name.value;
-          alert(prefix + " " + txtName);
+          alert(pre + " " + txtName);
         } //end with
       } //end speak
     </script>
