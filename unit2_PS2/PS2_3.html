@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">  
     <title>JavaScript Unit 2 Problem Set 2 | Problem 3</title>
+
     <script language="javascript">
+      hello=()=>"Hello";
       function speak(prefix) {
         with(document.form1) {
           txtName = name.value;
@@ -11,14 +13,14 @@
         } //end with
       } //end speak
     </script>
+
   </head>
+
   <body>
     <form name="form1">
       <label>Name:</label>
         <input type="text" name="name" id="name">
-        <!--Need to save name somewhere-->
       <div>
-        hello=()=>"Hello";
         <input type="button" value="Hello" onclick="speak(hello())">
       </div>
       <div>
