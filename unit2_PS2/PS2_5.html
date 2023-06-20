@@ -24,7 +24,7 @@
 
       <label>Quantity*</label>
         <input type="number" id="quant">
-      <input type="submit" id="btn1" value="Add" onclick="addItem()">
+      <input type="submit" id="btn1" value="Add" onclick="return addItem()">
     </form>
     
     <div name="display">
@@ -60,9 +60,9 @@
        }
      }
      
-     window.onload = function addItem() {
+     function addItem() {
         qty = document.getElementById("quant").value;
-        document.write(qty);
+        alert(qty);
      }
      </script>
   </body>
