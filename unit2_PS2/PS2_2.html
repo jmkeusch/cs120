@@ -8,18 +8,18 @@
     <script>
       let strNames = "Alice, Bob, Charlotte, David, Eugene";
       const names = strNames.split(',');
+      document.write("acknowledge print <br>");
 
       let list = document.getElementbyId("ordList");
       var fragList = document.createDocumentFragment();
       
       names.forEach(listNames);
       
-      function listNames(value, index, array) {
+      function listNames(array, value, list) {
         var li = document.createElement("li");
         li.textContent = value;
-        fragList.appendChild(li);
+        list.appendChild(li);
       }
-      list.appendChild(fragList);
     </script>
   </body>
 </html>
