@@ -9,7 +9,7 @@
       <p>TEST</p>
     </div>
     
-    <form name="form1" onsubmit="return validate()">
+    <form name="form1">
       <label for="lab1">Items:</label>
         <select id="dropdown" onchange="selectOption()">
           <option>apples</option>
@@ -18,10 +18,12 @@
           <option>milk</option>
           <option>cheese</option>
         </select>
-      <label>Quantity:</label>
+
+      <label margin-right="50px;">Quantity:</label>
         <input type="number" id="quant"> <br>
       <input type="submit" id="btn1" value="Add" onclick="addItem()">
     </form>
+    
     <div name="display">
       <p>Display:</p>
     </div>
