@@ -8,7 +8,7 @@
       window.onload = function speak() {
           //alert("in function");
           with (document.form1) {
-            btn1 = document.getElementById("btn1").value;
+            btn1 = document.form1.getElementById("btn1");
             txtName = document.form1.name.value;
             btn1.onclick = function () {
               alert(btn1 + " " + txtName);
