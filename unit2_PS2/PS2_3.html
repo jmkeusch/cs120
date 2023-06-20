@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">  
+    <title>JavaScript Unit 2 Problem Set 2 | Problem 3</title>
+    <script language="javascript">
+      function speak() {
+        with(document.forms[0]) {
+          txtName = text.name;
+          document.write("text name is " + txtName);
+        } //end with
+      }
+    </script>
+  </head>
+  <body>
+    <form name="form1">
+      <label>Name:</label>
+        <input type="text" name="name" id="name">
+        <!--Need to save name somewhere-->
+      <div>
+        <input type="button" value="Hello" onclick="speak()">
+      </div>
+      <div>
+        <input type="button" value="Good Bye" onclick="speak()">
+      </div>
+      <div>
+        <input type="button" value="Greetings" onclick="speak()">
+      </div>
+    </form>
+    <script>
+    </script>
+  </body>
+</html>
+
