@@ -27,7 +27,7 @@
       <input type="submit" id="btn1" value="Add" onclick="return addItem()">
     </form>
     
-    <div name="display">
+    <div name="order">
       <p>Your Order:</p>
     </div>
     <!--Begin Script-->
@@ -35,18 +35,13 @@
       const items = ["apples","bananas","bread", "milk", "cheese"];
       const prices =[1.7,      10.0,     4.0,     2.5,    6.0    ];
       
-      function selectOption(item) {
-         return selValue = dropdown.options[dropdown.selectedIndex].text;
+      function selectOption() {
+        return selValue = dropdown.options[dropdown.selectedIndex].text;
       }
   
-      // function getPrice(item) {
-      //  for (let i = 0; i < items.length; i++) {
-      //    if (selValue == items[i].value) {
-      //      document.print("Match found!");
-      //      return prices[i].value;
-      //    }
-      //  }
-      // }
+      function getPrice() {
+        return price = prices[dropdown.options.selectedIndex].value;
+      }
 
      function validate() {
        entry = document.getElementById("quant").value;
@@ -62,8 +57,15 @@
      
      function addItem() {
         qty = document.getElementById("quant").value;
-        item = selectOption(item);
-        alert(item);
+        item = selectOption();
+        price = getPrice();
+        cost = qty * price;
+        total =+ cost;
+
+        document.getElementById("order").innerHTML =
+          item + " x " + qty + " @ $" + price + ": " + cost + "| Total: " + total + "<br>";
+
+
      }
      </script>
   </body>
