@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">  
     <title>JavaScript Unit 2 Problem Set 2 | Problem 5</title>
+    <style>
+      textarea {width: 50px}
+    </style>
   </head>
   <body>
     <div>
@@ -47,13 +50,16 @@
          }
        }
      }
-     window.onload = function validate() {
-       quantity = document.getElementById("quant").value;
+
+     function validate() {
+       entry = document.getElementById("quant").value;
        
        if ((entry <= 1) || (entry >= 100) || (entry == "")) {
          alert("You must enter a quantity from 1 to 100.");
          document.getElementById("quant").focus();
          return false;
+       } else {
+         return true;
        }
      }
      
