@@ -47,7 +47,7 @@
      }
      window.onload = function validate() {
        entry = document.getElementById("price").value;
-       if ((entry >= 1) || entry <= 100) {
+       if ((entry <= 1) || entry >= 100) {
          alert("Quantity must be a number from 1 to 100.");
          return false;
        }
