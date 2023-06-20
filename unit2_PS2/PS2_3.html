@@ -4,11 +4,9 @@
     <meta charset="utf-8">  
     <title>JavaScript Unit 2 Problem Set 2 | Problem 3</title>
     <script language="javascript">
-      function speak() {
-        with(document.forms[0]) {
-          txtName = name.value;
-          document.alert("text name is " + txtName);
-        } //end with
+      function speak(prefix) {
+        txtName = document.getElementbyId("name").value;
+        alert(prefix + " " + txtName);
       }
     </script>
   </head>
@@ -18,13 +16,13 @@
         <input type="text" name="name" id="name">
         <!--Need to save name somewhere-->
       <div>
-        <input type="button" value="Hello" onclick="speak()">
+        <input type="button" value="Hello" onclick="speak(value)">
       </div>
       <div>
-        <input type="button" value="Good Bye" onclick="speak()">
+        <input type="button" value="Good Bye" onclick="speak(value)">
       </div>
       <div>
-        <input type="button" value="Greetings" onclick="speak()">
+        <input type="button" value="Greetings" onclick="speak(value)">
       </div>
     </form>
     <script>
