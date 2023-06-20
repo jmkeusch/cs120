@@ -4,14 +4,19 @@
     <title>JavaScript Unit 2 Problem Set 2 | Problem 1</title>
   </head>
   <body>
+    <ol id="ordList"></ol>
     <script>
       let strNames = "Alice, Bob, Charlotte, David, Eugene";
       const names = strNames.split(',');
+      let list = document.getElementbyId("ordList");
+      var fragList = document.createDocumentFragment();
       
       names.forEach(listNames);
       
       function listNames(value, index, array) {
-        var entry = "<li>" + value + "</li>";
+        var li = document.createElement("li");
+        li.textContent = value;
+        fragList.appendChild(li);
       }
 
     </script>

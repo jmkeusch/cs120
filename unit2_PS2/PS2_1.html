@@ -8,7 +8,11 @@
       let text = prompt("Please enter a sentence.");
       const array = text.split(" ");
       let numWords = array.length;
-      document.write("There are " + numWords + " words in your sentence.");
+      if (numWords == 1) {
+        document.write("There is " + numWords + "word in the sentence.");
+      } else {
+        document.write("There are " + numWords + " words in the sentence.");
+      }
     </script>
   </body>
 </html>
