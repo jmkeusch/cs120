@@ -35,8 +35,8 @@
       const items = ["apples","bananas","bread", "milk", "cheese"];
       const prices =[1.7,      10.0,     4.0,     2.5,    6.0    ];
       
-      function selectOption() {
-         let selValue = dropdown.options[dropdown.selectedIndex].text;
+      function selectOption(item) {
+         return selValue = dropdown.options[dropdown.selectedIndex].text;
       }
   
       // function getPrice(item) {
@@ -62,7 +62,8 @@
      
      function addItem() {
         qty = document.getElementById("quant").value;
-        alert(qty);
+        item = selectOption(item);
+        alert(item);
      }
      </script>
   </body>
