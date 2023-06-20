@@ -7,10 +7,15 @@
     <script>
       strNames = prompt("Enter several names, separated by a comma and space, e.g., \'Alice, Bob\'");
       names = strNames.split(',');
+      document.write(<ol>);
+      names.forEach(listNames);
+      document.write(</ol>);
+      
 
-      for (let i = 0; i < names.length; i++) {
-        document.write(names[i] + " ");
+      function listNames(value, index, array) {
+        document.write(<li>value</li>);
       }
+
     </script>
   </body>
 </html>
