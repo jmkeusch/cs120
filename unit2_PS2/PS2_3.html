@@ -6,22 +6,18 @@
 
     <script language="javascript">
       hello=()=>"Hello";
+      goodbye=()=>"Good bye";
+      greet=()=>"Greetings";
+
       speak = (e) => {
         with(document.form1) {
           txtName = name.value;
           alert(e + " " + txtName);
         } //end with
       } //end speak
-      //function speak(prefix) {
-      //  with(document.form1) {
-      //    txtName = name.value;
-      //    alert(prefix + " " + txtName);
-      //  } //end with
-      //} //end speaks
     </script>
 
   </head>
-
   <body>
     <form name="form1">
       <label>Name:</label>
@@ -30,10 +26,10 @@
         <input type="button" value="Hello" onclick="speak(hello())">
       </div>
       <div>
-        <input type="button" value="Good Bye" onclick="speak(value)">
+        <input type="button" value="Good Bye" onclick="speak(goodbye())">
       </div>
       <div>
-        <input type="button" value="Greetings" onclick="speak(value)">
+        <input type="button" value="Greetings" onclick="speak(greet())">
       </div>
     </form>
     <script>
