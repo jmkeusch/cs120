@@ -9,7 +9,7 @@
       <p>TEST</p>
     </div>
     
-    <form name="form1">
+    <form name="form1" onsubmit="return validate()" method="get" action="dummy.php">
       <label for="lab1">Items:</label>
         <select id="dropdown" onchange="selectOption()">
           <option>apples</option>
@@ -19,13 +19,13 @@
           <option>cheese</option>
         </select>
 
-      <label margin-right="50px;">Quantity:</label>
-        <input type="number" id="quant"> <br>
+      <label>Quantity:</label>
+        <input type="number" id="quant" width="50px;"> <br>
       <input type="submit" id="btn1" value="Add" onclick="addItem()">
     </form>
     
     <div name="display">
-      <p>Display:</p>
+      <p>Your Order:</p>
     </div>
 
     <script language="javascript">
@@ -48,9 +48,11 @@
        }
      }
      window.onload = function validate() {
-       entry = document.getElementById("price").value;
-       if ((entry <= 1) || entry >= 100) {
-         alert("Quantity must be a number from 1 to 100.");
+       quantity = document.getElementById("quant").value;
+       
+       if ((entry <= 1) || (entry >= 100) || (entry == "")) {
+         alert("You must enter a quantity from 1 to 100.");
+         document.getElementById("quant").focus();
          return false;
        }
      }
