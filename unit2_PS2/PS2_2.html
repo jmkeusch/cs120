@@ -5,15 +5,13 @@
   </head>
   <body>
     <script>
-      strNames = prompt("Enter several names, separated by a comma and space, e.g., \'Alice, Bob\'");
-      names = strNames.split(',');
-      document.write(<ol>);
-      names.forEach(listNames);
-      document.write(</ol>);
+      let strNames = "Alice, Bob, Charlotte, David, Eugene";
+      const names = strNames.split(',');
       
-
+      names.forEach(listNames);
+      
       function listNames(value, index, array) {
-        document.write(<li>value</li>);
+        var entry = "<li>" + value + "</li>";
       }
 
     </script>
