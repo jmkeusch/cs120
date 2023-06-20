@@ -61,13 +61,8 @@
      }
      
      window.onload = function addItem() {
-      btn = document.getElementById("btn1");
-      btn.onclick = function () {
-        item = document.getElementById("label1");
-        quantity = document.getElementById("quant");
-        console.log("item is " + item);
-        console.log("qty of item is: " + quantity);
-      }
+        qty = document.getElementById("quant").value;
+        alert(qty);
      }
      </script>
   </body>
