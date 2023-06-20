@@ -3,27 +3,64 @@
   <head>
     <meta charset="utf-8">  
     <title>JavaScript Unit 2 Problem Set 2 | Problem 5</title>
-
-    <script language="javascript">
-     const items = ["apples","bananas","bread", "milk", "cheese"];
-     const prices =[1.7,      10.0,     4.0,     2.5,    6.0    ];
-     //const prices =[1.7,      10.0,     4.0,     2.5,    6.0    ];
-
-    </script>
-
   </head>
   <body>
-    
-    <form name="form1">
-      <label>Items:</label>
-      <label>Price ($):</label>
-    </form>
     <div>
-      Display Area: <br>
-      
+      <p>TEST</p>
+    </div>
+    
+    <form name="form1" onsubmit="return validate()">
+      <label for="lab1">Items:</label>
+        <select id="dropdown" onchange="selectOption()">
+          <option>apples</option>
+          <option>bananas</option>
+          <option>bread</option>
+          <option>milk</option>
+          <option>cheese</option>
+        </select>
+      <label>Quantity:</label>
+        <input type="number" id="quant"> <br>
+      <input type="submit" id="btn1" value="Add" onclick="addItem()">
+    </form>
+    <div name="display">
     </div>
     <script>
     </script>
   </body>
+
+  <script language="javascript">
+    const items = ["apples","bananas","bread", "milk", "cheese"];
+    const prices =[1.7,      10.0,     4.0,     2.5,    6.0    ];
+    
+    let item = document.getElementById("lab1");
+    let quantity = document.getElementById("quant");
+    
+    function selectOption() {
+       let selValue = dropdown.options[dropdown.selectedIndex].text;
+    }
+
+    function getPrice(item) {
+     for (let i = 0; i < items.length; i++) {
+       if (item.value == items[i].value) {
+         return prices[i].value;
+       }
+     }
+   }
+   window.onload = function validate() {
+     entry = document.getElementById("price").value;
+     if ((entry >= 1) && entry <= 100) {
+       alert("Quantity must be a number from 1 to 100.");
+       return false;
+     }
+   }
+   
+   window.onload = function addItem() {
+     if (validate() == false) {
+       return;
+     }
+   }
+   </script>
+
+
 </html>
 
