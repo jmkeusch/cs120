@@ -5,39 +5,35 @@
     <title>JavaScript Unit 2 Problem Set 2 | Problem 3</title>
 
     <script language="javascript">
-      hello=()=>"Hello";
-      speak = (e) => {
+      hello  = ()  =>"Hello";
+      goodbye= ()  =>"Good bye";
+      greet  = ()  =>"Greetings";
+
+      speak = () => {
         with(document.form1) {
           txtName = name.value;
+          prefix = getElementbyId(this.value);
           alert(prefix + " " + txtName);
         } //end with
       } //end speak
-      //function speak(prefix) {
-      //  with(document.form1) {
-      //    txtName = name.value;
-      //    alert(prefix + " " + txtName);
-      //  } //end with
-      //} //end speaks
     </script>
 
   </head>
-
   <body>
     <form name="form1">
       <label>Name:</label>
         <input type="text" name="name" id="name">
       <div>
-        <input type="button" value="Hello" onclick="speak(value)"> 
+        <input type="button" value="Hello" onclick="speak()">
       </div>
       <div>
-        <input type="button" value="Good Bye" onclick="speak(value)">
+        <input type="button" value="Good Bye" onclick="speak()">
       </div>
       <div>
-        <input type="button" value="Greetings" onclick="speak(value)">
+        <input type="button" value="Greetings" onclick="speak()">
       </div>
     </form>
     <script>
     </script>
   </body>
 </html>
-
