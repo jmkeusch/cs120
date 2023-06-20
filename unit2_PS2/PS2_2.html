@@ -12,13 +12,14 @@
     <script>
       let strNames = "Alice, Bob, Charlotte, David, Eugene";
       const names = strNames.split(',');
-      let roster = document.getElementById("ordList");
 
       names.forEach(listNames);
       
-      document.write("for Each print <br>");
       function listNames(item, index, names) {
-        document.write(item); 
+        let roster = document.getElementById("ordList");
+        var li = document.createElement("li");
+        li.textContent = item;
+        roster.appendChild(li);
       }
     </script>
     
