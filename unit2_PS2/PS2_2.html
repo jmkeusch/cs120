@@ -12,11 +12,21 @@
     <script>
       let strNames = "Alice, Bob, Charlotte, David, Eugene";
       const names = strNames.split(',');
-      document.write("acknowledge print <br>");
+      let roster = document.getElementById("ordList");
+
+      names.forEach(listNames);
+
+      document.write("for loop print <br>");
       for (let i = 0; i < names.length; i++) {
         document.write(names[i] + "<br>");
       }
       
+      document.write("for Each print <br>");
+      function listNames(roster, array, index) {
+        var li = document.createElement("li");
+        li.textContent = array[index];
+        roster.appendChild(li);
+      }
     </script>
     
   </body>
