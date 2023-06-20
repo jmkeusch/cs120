@@ -6,7 +6,6 @@
     <script language="javascript">
       function speak(prefix) {
         with(document.form1) {
-          var pre = prefix;
           txtName = name.value;
           alert(pre + " " + txtName);
         } //end with
@@ -19,7 +18,8 @@
         <input type="text" name="name" id="name">
         <!--Need to save name somewhere-->
       <div>
-        <input type="button" value="Hello" onclick="speak(value)">
+        hello=()=>"Hello";
+        <input type="button" value="Hello" onclick="speak(hello())">
       </div>
       <div>
         <input type="button" value="Good Bye" onclick="speak(value)">
