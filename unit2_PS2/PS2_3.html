@@ -6,12 +6,18 @@
 
     <script language="javascript">
       hello=()=>"Hello";
-      function speak(prefix) {
+      speak = (e) => {
         with(document.form1) {
           txtName = name.value;
           alert(prefix + " " + txtName);
-        } //end with
-      } //end speaks
+        }//end with
+      } //end speak
+      //function speak(prefix) {
+      //  with(document.form1) {
+      //    txtName = name.value;
+      //    alert(prefix + " " + txtName);
+      //  } //end with
+      //} //end speaks
     </script>
 
   </head>
@@ -21,7 +27,7 @@
       <label>Name:</label>
         <input type="text" name="name" id="name" value="Jay">
       <div>
-        <input type="button" value="Hello" onclick="speak(hello())">
+        <input type="button" value="Hello" onclick="speak(value)">
       </div>
       <div>
         <input type="button" value="Good Bye" onclick="speak(value)">
