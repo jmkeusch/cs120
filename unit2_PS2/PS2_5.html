@@ -23,14 +23,14 @@
         </select>
 
       <label>Quantity:</label>
-        <input type="number" id="quant" width="50px;"> <br>
+        <input type="number" id="quant"> <br>
       <input type="submit" id="btn1" value="Add">
     </form>
     
     <div name="display">
       <p>Your Order:</p>
     </div>
-
+    <!--Begin Script-->
     <script language="javascript">
       const items = ["apples","bananas","bread", "milk", "cheese"];
       const prices =[1.7,      10.0,     4.0,     2.5,    6.0    ];
@@ -42,14 +42,14 @@
          let selValue = dropdown.options[dropdown.selectedIndex].text;
       }
   
-      function getPrice(item) {
-       for (let i = 0; i < items.length; i++) {
-         if (selValue == items[i].value) {
-           document.print("Match found!");
-           return prices[i].value;
-         }
-       }
-     }
+      // function getPrice(item) {
+      //  for (let i = 0; i < items.length; i++) {
+      //    if (selValue == items[i].value) {
+      //      document.print("Match found!");
+      //      return prices[i].value;
+      //    }
+      //  }
+      // }
 
      function validate() {
        entry = document.getElementById("quant").value;
@@ -63,11 +63,11 @@
        }
      }
      
-     window.onload = function addItem() {
-       if (validate() == false) {
-         return;
-       }
-     }
+    //  window.onload = function addItem() {
+    //    if (validate() == false) {
+    //      return;
+    //    }
+    //  }
      </script>
   </body>
 
