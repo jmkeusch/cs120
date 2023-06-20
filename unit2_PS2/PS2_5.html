@@ -51,7 +51,7 @@
      function validate() {
        entry = document.getElementById("quant").value;
        
-       if ((entry <= 1) || (entry >= 100) || (entry == "")) {
+       if ((entry < 1) || (entry > 100) || (entry == "")) {
          alert("You must enter a quantity from 1 to 100.");
          document.getElementById("quant").focus();
          return false;
@@ -60,7 +60,7 @@
        }
      }
      
-     function addItem() {
+     window.onload = function addItem() {
       let item = document.getElementById("label1");
       let quantity = document.getElementById("quant");
       console.log("item is " + item);
