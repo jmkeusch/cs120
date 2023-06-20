@@ -5,18 +5,18 @@
     <title>JavaScript Unit 2 Problem Set 2 | Problem 3</title>
 
     <script language="javascript">
-      window.onload="init()";
+      //window.onload="init()";
       window.onload = function speak() {
           alert("in function");
           with (document.form1) {
+            btn1 = document.form1.getElementById("btn1");
             txtName = document.form1.name.value;
-            btn1 = document.form1.getElementByID("btn1");
             btn1.onclick = function () {
               alert(btn1.value + " " + txtName);
             }
-            btn2 = document.form1.getElementById("btn2");
-            btn3 = document.form1.getElementByID("btn3");
-            alert(prefix + " " + txtName);
+            //btn2 = document.form1.getElementById("btn2");
+            //btn3 = document.form1.getElementByID("btn3");
+            //alert(prefix + " " + txtName);
             } //end with
           
       } //end speak
@@ -28,13 +28,13 @@
       <label>Name:</label>
         <input type="text" name="name" id="name">
       <div>
-        <input type="button" id=btn1 value="Hello" onclick="speak()">
+        <input type="button" id="btn1" value="Hello" onclick="speak()">
       </div>
       <div>
-        <input type="button" id=btn2 value="Good Bye" onclick="speak()">
+        <input type="button" id="btn2" value="Good Bye" onclick="speak()">
       </div>
       <div>
-        <input type="button" id=btn3 value="Greetings" onclick="speak()">
+        <input type="button" id="btn3" value="Greetings" onclick="speak()">
       </div>
     </form>
     <script>
