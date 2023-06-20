@@ -61,16 +61,15 @@
      }
      
      window.onload = function addItem() {
-      let item = document.getElementById("label1");
-      let quantity = document.getElementById("quant");
-      console.log("item is " + item);
-      console.log("qty of item is: " + quantity);
+      btn = document.getElementById("btn1");
+      btn.onclick = function () {
+        item = document.getElementById("label1");
+        quantity = document.getElementById("quant");
+        console.log("item is " + item);
+        console.log("qty of item is: " + quantity);
+      }
      }
      </script>
   </body>
-
-  
-
-
 </html>
 
