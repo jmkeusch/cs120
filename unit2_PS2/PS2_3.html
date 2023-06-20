@@ -5,10 +5,11 @@
     <title>JavaScript Unit 2 Problem Set 2 | Problem 3</title>
     <script language="javascript">
       function speak(prefix) {
-        txtName = document.form1.getElementbyId("name").value;
-        
-        alert(prefix + " " + txtName);
-      }
+        with(document.form1) {
+          txtName = name.value;
+          alert(prefix + " " + txtName);
+        } //end with
+      } //end speak
     </script>
   </head>
   <body>
