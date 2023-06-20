@@ -7,14 +7,18 @@
     <script language="javascript">
       window.onload="init()";
       window.onload = function speak() {
-          txtName = document.form1.name.value;
-          btn1 = document.form1.getElementByID("btn1");
-          btn1.onclick = function () {
-            alert(btn1.value + " " + txtName);
-          }
-          btn2 = document.form1.getElementById("btn2");
-          btn3 = document.form1.getElementByID("btn3");
-          alert(prefix + " " + txtName);
+          alert("in function");
+          with (document.form1) {
+            txtName = document.form1.name.value;
+            btn1 = document.form1.getElementByID("btn1");
+            btn1.onclick = function () {
+              alert(btn1.value + " " + txtName);
+            }
+            btn2 = document.form1.getElementById("btn2");
+            btn3 = document.form1.getElementByID("btn3");
+            alert(prefix + " " + txtName);
+            } //end with
+          
       } //end speak
     </script>
 
