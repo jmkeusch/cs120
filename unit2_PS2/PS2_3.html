@@ -9,10 +9,10 @@
       goodbye=()=>"Good bye";
       greet=()=>"Greetings";
 
-      speak = (e) => {
+      speak = (prefix) => {
         with(document.form1) {
           txtName = name.value;
-          alert(e + " " + txtName);
+          alert(prefix + " " + txtName);
         } //end with
       } //end speak
     </script>
