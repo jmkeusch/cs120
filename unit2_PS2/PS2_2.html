@@ -15,11 +15,6 @@
       let roster = document.getElementById("ordList");
 
       names.forEach(listNames);
-
-      document.write("for loop print <br>");
-      for (let i = 0; i < names.length; i++) {
-        document.write(names[i] + "<br>");
-      }
       
       document.write("for Each print <br>");
       function listNames(item, index, names) {
@@ -38,6 +33,10 @@
         li.textContent = value;
         list.appendChild(li);
 
+        document.write("for loop print <br>");
+      for (let i = 0; i < names.length; i++) {
+        document.write(names[i] + "<br>");
+      }
 
         document.write("for Each print <br>");
       function listNames(roster, array, index) {
