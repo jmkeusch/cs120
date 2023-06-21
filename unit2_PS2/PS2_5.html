@@ -20,7 +20,7 @@
 
       <label>Quantity*</label>
         <input type="number" id="quant">
-      <input type="submit" id="btn1" value="Add" onclick="return addItem()">
+      <input type="submit" id="btn1" value="Add" onclick="addItem()">
     </form>
     
     <!--Div to Write to-->
@@ -35,7 +35,7 @@
      function validate() {
        entry = parseInt(document.getElementById("quant").value);
        
-       if ((entry < 1) || (entry > 100) || (entry == "")) {
+       if ((entry < 1) || (entry > 100) || (!entry.isInteger())) {
          alert("You must enter a quantity from 1 to 100.");
          document.getElementById("quant").focus();
          return false;
@@ -45,14 +45,14 @@
      }
      
      function addItem() {
-        qty = Number(document.getElementById("quant").value);
-        item = selectedIndex().text;
-        price = (prices[selectedIndex()].value);
+        qty = document.getElementById("quant").value;
+        item = items[selectedIndex()].text;
+        price = prices[selectedIndex()].value;
         cost = qty * price;
         total =+ cost;
 
         document.getElementById("order").innerText =
-          item + " x " + qty + " @ $" + price + " : " + cost + "| Total: " + total + "<br> <br>";
+          item + " x " + qty + " @ $" + price + " : " + cost + "| Total: $" + total + "<br> <br>";
      }
      </script>
   </body>
