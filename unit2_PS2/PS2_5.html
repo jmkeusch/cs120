@@ -8,10 +8,6 @@
     </style>
   </head>
   <body>
-    <div>
-      <p>TEST</p>
-    </div>
-    
     <form name="form1" onsubmit="return validate()" method="get">
       <label for="label1">Items:</label>
         <select id="dropdown" onchange="selectOption()">
@@ -27,8 +23,9 @@
       <input type="submit" id="btn1" value="Add" onclick="return addItem()">
     </form>
     
-    <div name="order" id="order">
-    </div>
+    <!--Div to Write to-->
+    <div name="order" id="order"></div>
+
     <!--Begin Script-->
     <script language="javascript">
       const items = ["apples","bananas","bread", "milk", "cheese"];
@@ -61,7 +58,7 @@
         cost = qty * price;
         total =+ cost;
 
-        document.getElementById("order").innerHTML =
+        document.getElementById("order").innerText =
           item + " x " + qty + " @ $" + price + ": " + cost + "| Total: " + total + "<br> <br>";
 
 
