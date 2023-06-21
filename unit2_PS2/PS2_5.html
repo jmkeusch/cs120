@@ -6,7 +6,7 @@
   <body>
     <form name="form1" onsubmit="return validate()">
       <label for="dropdown">Items:</label>
-        <select id="dropdown" onchange="selectedIndex()">
+        <select id="dropdown" onchange="return selectedIndex()">
           <option>apples</option>
           <option>bananas</option>
           <option>bread</option>
@@ -17,7 +17,7 @@
       <label for="quant">Quantity*</label>
         <input type="number" name="quant" id="quant">
       <input type="submit" id="btn1" value="Add" onclick="return addItem()">
-      <input type="reset" id="btn2" value="Start Over">
+      <input type="reset" id="btn2" value="Start Over" onclick="window.location.reload()">
     </form>
     
     <!--Write to Div-->
