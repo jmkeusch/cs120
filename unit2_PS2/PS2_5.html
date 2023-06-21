@@ -6,7 +6,7 @@
   <body>
     <form name="form1" onsubmit="return validate()">
       <label for="dropdown">Items:</label>
-        <select id="dropdown" onchange="return selectedIndex()">
+        <select id="dropdown" onchange="selectedIndex()">
           <option>apples</option>
           <option>bananas</option>
           <option>bread</option>
@@ -16,19 +16,21 @@
 
       <label for="quant">Quantity*</label>
         <input type="number" name="quant" id="quant">
-      <input type="submit" id="btn1" value="Add" onclick="return addItem()">
+      <input type="submit" id="btn1" value="Add" onclick="addItem()">
       <input type="reset" id="btn2" value="Start Over" onclick="window.location.reload()">
     </form>
     
     <!--Write to Div-->
-    <div name="order" id="order"></div>
+    <div name="order" id="order">
+
+    </div>
 
     <!--Begin Script-->
     <script>
       const items  = ["apples","bananas","bread", "milk", "cheese"];
       const prices = [1.70,     10.00,    4.50,    2.50,   6.00    ];
       
-     function validate() {
+     window.onload = function validate() {
        entry = parseInt(document.getElementById("quant").value);
        
        if ((entry < 1) || (entry > 100) || (entry == "") || (!entry.isInteger())) {
@@ -39,8 +41,12 @@
          return true;
        }
      }
+
+     function selectedIndex() {
+      var index = document.getElementById("dropdown").selectedIndex;
+     }
      
-     function addItem() {
+     window.onload = function addItem() {
         qty = document.getElementById("quant").value;
         item = items[selectedIndex()].text;
         price = prices[selectedIndex()].value;
