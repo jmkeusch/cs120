@@ -15,7 +15,7 @@
         </select>
 
       <label for="quant">Quantity*</label>
-        <input type="number" id="quant">
+        <input type="number" name="quant" id="quant">
       <input type="submit" id="btn1" value="Add" onclick="return addItem()">
       <input type="reset" id="btn2" value="Start Over">
     </form>
@@ -48,7 +48,7 @@
         total =+ cost;
 
         document.getElementById("order").innerHTML =
-          item + " x " + qty + " @ $" + price + " : " + cost + "| Total: $" + total + "<br>";
+          console.log(item + " x " + qty + " @ $" + price + " : " + cost + "| Total: $" + total + "<br>");
      }
      </script>
   </body>
