@@ -9,7 +9,7 @@
   </head>
   <body>
     <form name="form1" onsubmit="return validate()" method="get">
-      <label for="label1">Items:</label>
+      <label for="dropdown">Items:</label>
         <select id="dropdown" onchange="selectedIndex()">
           <option>apples</option>
           <option>bananas</option>
@@ -21,6 +21,7 @@
       <label>Quantity*</label>
         <input type="number" id="quant">
       <input type="submit" id="btn1" value="Add" onclick="addItem()">
+      <input type="reset" id="btn2" value="Start Over">
     </form>
     
     <!--Div to Write to-->
