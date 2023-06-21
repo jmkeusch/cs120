@@ -35,7 +35,7 @@
      function validate() {
        entry = parseInt(document.getElementById("quant").value);
        
-       if ((entry < 1) || (entry > 100) || (!entry.isInteger())) {
+       if ((entry < 1) || (entry > 100) || (entry == "") || (!entry.isInteger())) {
          alert("You must enter a quantity from 1 to 100.");
          document.getElementById("quant").focus();
          return false;
@@ -51,7 +51,7 @@
         cost = qty * price;
         total =+ cost;
 
-        document.getElementById("order").innerText =
+        document.getElementById("order").innerHTML =
           item + " x " + qty + " @ $" + price + " : " + cost + "| Total: $" + total + "<br> <br>";
      }
      </script>
