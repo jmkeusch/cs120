@@ -4,13 +4,13 @@
     <meta charset="utf-8">  
     <title>JavaScript Unit 2 Problem Set 2 | Problem 5</title>
     <style>
-      textarea {width: 50px}
+      .input {width: 50px}
     </style>
   </head>
   <body>
     <form name="form1" onsubmit="return validate()" method="get">
       <label for="label1">Items:</label>
-        <select id="dropdown" onchange="selectOption()">
+        <select id="dropdown" onchange="selectedIndex()">
           <option>apples</option>
           <option>bananas</option>
           <option>bread</option>
@@ -31,13 +31,6 @@
       const items  = ["apples","bananas","bread", "milk", "cheese"];
       const prices = [1.70,     10.00,    4.50,    2.50,   6.00    ];
       
-      // function selectedIndex() {
-      //   return dropdown.options[dropdown.selectedIndex];
-      // }
-  
-      // function getPrice() {
-      //   return price = prices[dropdown.options.selectedIndex];
-      // }
 
      function validate() {
        entry = parseInt(document.getElementById("quant").value);
@@ -54,7 +47,7 @@
      function addItem() {
         qty = Number(document.getElementById("quant").value);
         item = selectedIndex().text;
-        price = Number((prices[selectedIndex()].value));
+        price = (prices[selectedIndex()].value);
         cost = qty * price;
         total =+ cost;
 
