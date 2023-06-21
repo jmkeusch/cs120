@@ -4,7 +4,7 @@
     <title>JavaScript Unit 2 Problem Set 2 | Problem 5</title>
   </head>
   <body>
-    <form name="form1" onsubmit="return validate()" method="get">
+    <form name="form1" onsubmit="return validate()">
       <label for="dropdown">Items:</label>
         <select id="dropdown" onchange="selectedIndex()">
           <option>apples</option>
@@ -16,7 +16,7 @@
 
       <label for="quant">Quantity*</label>
         <input type="number" id="quant">
-      <input type="submit" id="btn1" value="Add" onclick="addItem()">
+      <input type="submit" id="btn1" value="Add" onclick="return addItem()">
       <input type="reset" id="btn2" value="Start Over">
     </form>
     
