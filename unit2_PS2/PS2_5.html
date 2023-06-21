@@ -4,7 +4,7 @@
     <title>JavaScript Unit 2 Problem Set 2 | Problem 5</title>
   </head>
   <body>
-    <form name="form1" onsubmit="return validate()" method="get">
+    <form name="form1" onsubmit="return validate()">
       <label for="dropdown">Items:</label>
         <select id="dropdown" onchange="selectedIndex()">
           <option>apples</option>
@@ -43,12 +43,12 @@
      }
 
      function selectedIndex() {
-      let index = document.getElementById("dropdown").selectedIndex;
+        index = document.getElementById("dropdown").selectedIndex;
      }
      
      window.onload = function addItem() {
         qty = document.getElementById("quant").value;
-        item = document.getElementById("dropdown").selectedIndex.text;
+        item = items[document.getElementById("dropdown").selectedIndex].text;
         price = prices[document.getElementById("dropdown").selectedIndex].value;
         cost = qty * price;
         total =+ cost;
