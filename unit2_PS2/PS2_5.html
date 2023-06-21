@@ -31,7 +31,7 @@
       const prices = [1.70,     10.00,    4.50,    2.50,   6.00    ];
       
      window.onload = function validate() {
-       entry = parseInt(document.getElementById("quant").value);
+       entry = document.getElementById("quant").value;
        
        if ((entry < 1) || (entry > 100) || (entry == "") || (!entry.isInteger())) {
          alert("You must enter a quantity from 1 to 100.");
