@@ -48,7 +48,7 @@
      
      window.onload = function addItem() {
         qty = document.getElementById("quant").value;
-        item = items[document.getElementById("dropdown").selectedIndex].text;
+        item = document.getElementById("dropdown").selectedIndex.text;
         price = prices[document.getElementById("dropdown").selectedIndex].value;
         cost = qty * price;
         total =+ cost;
