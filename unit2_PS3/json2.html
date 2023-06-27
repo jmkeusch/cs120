@@ -12,14 +12,14 @@
   <body>
     <script language="javascript">
        $.get("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function( data ) {
-            console.log("raw data\n" + data)
+            console.log("raw data\n" + data);
             str = JSON.stringify(data);
             document.getElementById("songs").innerHTML = str;
             console.log("string data\n" + str);
 
-            str = "<ul>"
+            str = "<ul>";
             data.forEach(function(songs) {
-                str += "<li>"
+                str += "<li>";
                     + songs.title + " "
                     + songs.artist + "</li>";
             })
