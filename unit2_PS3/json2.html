@@ -12,14 +12,14 @@
   <body>
     <script language="javascript">
        $.get("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function( songData ) {
-            songData.forEach(function(songData) {
-                var str = Object.values(songData);
+            songData.forEach(function(jsonObj) {
+                var str = Object.values(jsonObj);
                 document.write(values.join(", ") + "<br>");
             });
        })
        .fail(function(error) {
             console.error("Could not read JSON file. Error: ", error);
-       })
+       });
     </script>
   </body>
 </html>
