@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>JSON Songs PS1</title>
+    <title>JSON Songs PS2</title>
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"   
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   
             crossorigin="anonymous">
@@ -12,10 +12,18 @@
   <body>
     <script language="javascript">
        $.get("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function( data ) {
-            document.write("test2 + <br>");
+            console.log("raw data\n" + data)
             str = JSON.stringify(data);
-            document.write(str);  
-            }
+            document.getElementById("songs").innerHTML = str;
+            console.log("string data\n" + str);
+
+            str = "<ul>"
+            data.forEach(function(songs) {
+                str += "<li>"
+                    + songs.title + " "
+                    + songs.artist + "</li>";
+            })
+       }
         ) //end get
     </script>
   </body>
