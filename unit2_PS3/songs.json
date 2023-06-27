@@ -1,77 +1,76 @@
-{
-    "songs": [
-        { 
-            "title": "Bohemian Rhapsody",
-            "artist": "Queen",
-            "year": 1975,
-            "genre": ["rock", "progressive rock"]
-        },
-        {
-            "title": "Shape of You",
-            "artist": "Ed Sheeran",
-            "year": 2017,
-            "genre": ["pop", "R&B"]
-        },
-        {
-            "title": "Billie Jean",
-            "artist": "Michael Jackson",
-            "year": 1982,
-            "genre": ["pop", "dance", "funk"]
-        },
-        {
-            "title": "Hotel California",
-            "artist": "Eagles",
-            "year": 1976,
-            "genre": ["rock", "soft rock"]
-        },
-        {
-            "title": "Rolling in the Deep",
-            "artist": "Adele",
-            "year": 2010,
-            "genre": ["pop", "soul", "R&B"]
-        },
-        {
-            "title": "Sweet Child o'Mine",
-            "artist": "Guns N' Roses",
-            "year": 1987,
-            "genre": ["hard rock", "heavy metal"]
-        },
-        {
-            "title": "Hey Jude",
-            "artist": "The Beatles",
-            "year": 1968,
-            "genre": ["rock", "pop"]
-        },
-        {
-            "title": "No Woman, No Cry",
-            "artist": "Bob Marley",
-            "year": 1974,
-            "genre": ["reggae", "ska"]
-        },
-        {
-            "title": "Take on Me",
-            "artist": "a-Ha",
-            "year": 1984,
-            "genre": ["synthpop", "new wave"]
-        },
-        {
-            "title": "Volare",
-            "artist": "Gypsy Kings",
-            "year": 1989,
-            "genre": ["pop", "latin pop"]
-        },
-        {
-            "title": "Ventura Highway",
-            "artist": "America",
-            "year": 1972,
-            "genre": ["soft rock", "folk rock", "rock"]
-        },
-        {
-            "title": "On the Street Where You Live",
-            "artist": "Dean Martin",
-            "year": 1956,
-            "genre": ["musical theater"]
-        }
-    ]
-}
+
+[
+    { 
+        "title": "Bohemian Rhapsody",
+        "artist": "Queen",
+        "year": 1975,
+        "genre": ["rock", "progressive rock"]
+    },
+    {
+        "title": "Shape of You",
+        "artist": "Ed Sheeran",
+        "year": 2017,
+        "genre": ["pop", "R&B"]
+    },
+    {
+        "title": "Billie Jean",
+        "artist": "Michael Jackson",
+        "year": 1982,
+        "genre": ["pop", "dance", "funk"]
+    },
+    {
+        "title": "Hotel California",
+        "artist": "Eagles",
+        "year": 1976,
+        "genre": ["rock", "soft rock"]
+    },
+    {
+        "title": "Rolling in the Deep",
+        "artist": "Adele",
+        "year": 2010,
+        "genre": ["pop", "soul", "R&B"]
+    },
+    {
+        "title": "Sweet Child o'Mine",
+        "artist": "Guns N' Roses",
+        "year": 1987,
+        "genre": ["hard rock", "heavy metal"]
+    },
+    {
+        "title": "Hey Jude",
+        "artist": "The Beatles",
+        "year": 1968,
+        "genre": ["rock", "pop"]
+    },
+    {
+        "title": "No Woman, No Cry",
+        "artist": "Bob Marley",
+        "year": 1974,
+        "genre": ["reggae", "ska"]
+    },
+    {
+        "title": "Take on Me",
+        "artist": "a-Ha",
+        "year": 1984,
+        "genre": ["synthpop", "new wave"]
+    },
+    {
+        "title": "Volare",
+        "artist": "Gypsy Kings",
+        "year": 1989,
+        "genre": ["pop", "latin pop"]
+    },
+    {
+        "title": "Ventura Highway",
+        "artist": "America",
+        "year": 1972,
+        "genre": ["soft rock", "folk rock", "rock"]
+    },
+    {
+        "title": "On the Street Where You Live",
+        "artist": "Dean Martin",
+        "year": 1956,
+        "genre": ["musical theater"]
+    }
+]
 
