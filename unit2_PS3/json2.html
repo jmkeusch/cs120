@@ -11,6 +11,7 @@
 
   <body>
     <script language="javascript">
+        console.log("On file");
        $.get("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function( jsonData ) {
             jsonData.forEach(function(jsonObj) {
                 var str = Object.values(jsonObj);
