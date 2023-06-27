@@ -11,8 +11,8 @@
 
   <body>
     <script language="javascript">
-       $.get("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function( songData ) {
-            songData.forEach(function(jsonObj) {
+       $.get("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function( jsonData ) {
+            jsonData.forEach(function(jsonObj) {
                 var str = Object.values(jsonObj);
                 document.write(values.join(", ") + "<br>");
             });
