@@ -10,14 +10,14 @@
     <H1>JSON 2</H1>
     <script language="javascript">
         document.write("test");
-       $.get("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function( jsonData ) {
-            jsonData.forEach(function(jsonObj) {
-                var str = Object.values(jsonObj);
-                document.write(values.join(", ") + "<br>");
+       $(document).ready(function () {
+        $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
+            var str = "init";
+
+            $.each(data, function (key, value) {
+                document.write(str);
             });
-       })
-       .fail(function(error) {
-            console.error("Could not read JSON file. Error: ", error);
+        });
        });
     </script>
   </body>
