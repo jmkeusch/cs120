@@ -11,17 +11,15 @@
 
   <body>
     <script language="javascript">
-       $.get("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function( data ) {
-            console.log("raw data\n" + data);
-            str = JSON.stringify(data);
-            document.getElementById("songs").innerHTML = str;
-            console.log("string data\n" + str);
-
-            data.forEach(function(songs) {
-                songs.title + " ";
-            })
-       }
-        ) //end get
+       $.get("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function( songData ) {
+            songData.forEach(function(songData) {
+                var str = Object.values(songData);
+                document.write(values.join(", ") + "<br>");
+            });
+       })
+       .fail(function(error) {
+            console.error("Could not read JSON file. Error: ", error);
+       })
     </script>
   </body>
 </html>
