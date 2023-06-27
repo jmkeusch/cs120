@@ -10,9 +10,10 @@
   </head>
 
   <body>
+    <p>test</p> <br> 
     <script language="javascript">
        $.get("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function( data ) {
-        
+            document.write("test + <br>");
             console.log('raw data\n'+ data);
             str = JSON.stringify(data);
             document.getElementById('songs').innerHTML = str;
