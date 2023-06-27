@@ -10,19 +10,13 @@
   </head>
 
   <body>
-    <p>test1</p> <br> 
     <script language="javascript">
-       $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function( data ) {
+       $.get("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function( data ) {
             document.write("test2 + <br>");
-            console.log('raw data\n'+ data);
             str = JSON.stringify(data);
-            document.getElementById('songs').innerHTML = str;
-            console.log('string data\n' + str);
-            
-        })
-
-        strSongs = JSON.stringify(songs);
-      document.write(strSongs + "<br>");
+            document.write(str);  
+            }
+        ) //end get
     </script>
   </body>
 </html>
