@@ -17,11 +17,8 @@
             document.getElementById("songs").innerHTML = str;
             console.log("string data\n" + str);
 
-            str = "<ul>";
             data.forEach(function(songs) {
-                str += "<li>";
-                    + songs.title + " "
-                    + songs.artist + "</li>";
+                songs.title + " ";
             })
        }
         ) //end get
