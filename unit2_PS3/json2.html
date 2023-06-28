@@ -14,11 +14,15 @@
         $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
     
             $.each(data, function (key, value) {
-                //var str = Object.values(data)
+                var genres = Object.values(data.genre)
                 document.write(value.title + "<br>");
                 document.write("Artist: " + value.artist + "<br>");
                 document.write("Released: " + value.year + "<br>");
                 document.write("Genre: ");
+                for (var i = 0; i < genres.length; i++) {
+                    var genre = genres[i];
+                    document.write(genre + ", ");
+                }
                 document.write("<br><br>");
             });
         });
