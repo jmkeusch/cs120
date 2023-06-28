@@ -43,19 +43,22 @@
             $("#dropdown").html(listItem);
             })
         }
+        function match(selection) {
+            
+        }
         //Event handler
         function displaySongs() {
             //let interest = document.getElementById("dropdown").selectedIndex.value;
             //document.write("sel is: " + sel);
             $(document).ready(function () {
                 $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json"), function (data) {
+                    var sel = $("#dropdown :selected").text();
                     //each JSON obj
                     $.each(data, function (key, value) {
                         //each genre array
-                        $(genre).each(function(sel, value) {
-                            var sel = $("#dropdown :selected").text();
+                        $.each(this.genre, function(sel, value) {
                             if (sel == this.value) {
-                                document.write("TRUE");
+                                document.console(title.value);
                             }
                         })
                     })
