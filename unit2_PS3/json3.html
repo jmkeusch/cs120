@@ -45,13 +45,14 @@
        }
        //Event handler
         function displaySongs() {
-            let interest = document.getElementById("dropdown").selectedIndex.value;
+            //let interest = document.getElementById("dropdown").selectedIndex.value;
+            let sel = $("#dropdown").prop('SelectedIndex');
             document.write("sel is: " + interest);
             $(document).ready(function () {
                 $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json"), function (data) {
                     $.each(data, function (key, value) {
                         for (let i = 0; i < value.genre.length; i++) {
-                            if (interest == value.genre[i]) {
+                            if (sel == value.genre[i]) {
                                 console.log(value.title);
                                 break;
                             }
@@ -59,24 +60,7 @@
                     })
                 }
             })
-        }
-
-
-            // $.get("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
-            //     $.each(data, function (key, value) {
-            //         for (let i = 0; i < types.length; i++) {
-            //             if (interest == types[i]) {
-            //                 isMatch = true;
-            //                 break;
-            //             }
-            //         }
-            //     if (isMatch == true) {
-            //         console.log(value.title + "<br>");
-            //     }
-            //     })
-            // })
-        
-       
+        }       
     </script>
   </body>
 </html>
