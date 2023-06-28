@@ -46,7 +46,7 @@
        //Event handler
         function displaySongs() {
             //let interest = document.getElementById("dropdown").selectedIndex.value;
-            let sel = $("#dropdown").prop('SelectedIndex');
+            let sel = $("#dropdown").prop('SelectedIndex').value;
             document.write("sel is: " + interest);
             $(document).ready(function () {
                 $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json"), function (data) {
