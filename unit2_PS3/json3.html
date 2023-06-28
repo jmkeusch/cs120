@@ -50,9 +50,12 @@
             document.write("sel is: " + sel);
             $(document).ready(function () {
                 $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json"), function (data) {
+                    //each JSON obj
                     $.each(data, function (key, value) {
+                        // for each genre in array
                         for (let i = 0; i < value.genre.length; i++) {
-                            if (sel == value.genre[i]) {
+                            g = JSON.stringify(value.genre[i]);
+                            if (sel == g) {
                                 console.log(value.title);
                                 break;
                             }
