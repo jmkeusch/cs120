@@ -21,16 +21,18 @@
                 for (let i = 0; i < genres.length; i++) {
                     var gen = JSON.stringify(value.genre[i]);
                     range.add(gen);
-                    //document.write(gen);
                 }
             });
+            popOptions();
         });
        });
        //Populate genre options on form
-       range.forEach (function(value) {
-        listItem += "<option value='" + value + "'>" + value + "</option>";
-        $("#dropdown").html(listItem);
-       })
+       window.onload = function popOptions() {
+            range.forEach (function(value) {
+            listItem += "<option value='" + value + "'>" + value + "</option>";
+            $("#dropdown").html(listItem);
+            })
+       }
        
     </script>
 
