@@ -13,10 +13,21 @@
             </select>
         <input type="button" id="btn1" value="Filter">
     </form>
+    <div id="results">
+    </div>
 
     <script language="javascript">
         //GLOBAL VAR
         let range = new Set ();
+        //Populate genre options on form
+        window.onload = function popOptions() {
+            var listItem = "";
+            range.forEach (function(value) {
+            listItem += "<option value='" + value + "'>" + value + "</option>";
+            $("#dropdown").html(listItem);
+            })
+       }
+       //Read in JSON data
         $(document).ready(function () {
         //JSON data retrieved/stored in 'data'
         $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
@@ -31,30 +42,21 @@
             popOptions();
         });
        });
-        //Populate genre options on form
-        window.onload = function popOptions() {
-            var listItem = "";
-            range.forEach (function(value) {
-            listItem += "<option value='" + value + "'>" + value + "</option>";
-            $("#dropdown").html(listItem);
-            })
-       }
 
         // window.onload = function displaySongs() {
-        //     let genre = document.getElementById("dropdown").selectedIndex;
-        //     var genres = value.genre;
+        //     let interest = document.getElementById("dropdown").selectedIndex;
+        //     var types = value.genre;
         //     var isMatch = false;
         //     range.forEach (function(value) {
         //     $.get("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
         //         $.each(data, function (key, value) {
-        //             for (let i = 0; i < genres.length; i++) {
-        //                 var gen = value.genre[i];
-        //                 if (gen == genre) {
+        //             for (let i = 0; i < types.length; i++) {
+        //                 if (interest == types[i]) {
         //                     isMatch = true;
         //                     break;
         //                 }
         //             }
-        //         if (isMatch) {
+        //         if (isMatch == true) {
         //             document.write(value.title + "<br>");
         //         }
         //         })
