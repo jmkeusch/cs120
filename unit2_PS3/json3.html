@@ -19,6 +19,8 @@
     <script language="javascript">
         //GLOBAL VAR
         let range = new Set ();
+       //Read in JSON data
+        $(document).ready(function () {
         //Populate genre options on form
         window.onload = function popOptions() {
             var listItem = "";
@@ -27,8 +29,6 @@
             $("#dropdown").html(listItem);
             })
        }
-       //Read in JSON data
-        $(document).ready(function () {
         //JSON data retrieved/stored in 'data'
         $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
             //Get Genre options
@@ -63,10 +63,6 @@
         //     })
         //     })
         // }
-
-
-        //read in JSON data
-        document.write("test");
        
     </script>
   </body>
