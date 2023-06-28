@@ -26,6 +26,21 @@
             })
        }
 
+       $(document).ready(function () {
+        //JSON data retrieved/stored in 'data'
+        $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
+            //Get Genre options
+            $.each(data, function (key, value) {
+                var genres = value.genre;
+                for (let i = 0; i < genres.length; i++) {
+                    var gen = JSON.stringify(value.genre[i]);
+                    range.add(gen);
+                }
+            });
+            popOptions();
+        });
+       });
+
         window.onload = function displaySongs() {
             let genre = document.getElementById("dropdown").selectedIndex;
             var genres = value.genre;
@@ -48,24 +63,8 @@
             })
        }
 
-
         //read in JSON data
         document.write("test");
-
-       $(document).ready(function () {
-        //JSON data retrieved/stored in 'data'
-        $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
-            //Get Genre options
-            $.each(data, function (key, value) {
-                var genres = value.genre;
-                for (let i = 0; i < genres.length; i++) {
-                    var gen = JSON.stringify(value.genre[i]);
-                    range.add(gen);
-                }
-            });
-            popOptions();
-        });
-       });
        
     </script>
   </body>
