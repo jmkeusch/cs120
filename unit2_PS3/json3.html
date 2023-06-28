@@ -11,7 +11,7 @@
         <label for="dropdown">Genre:</label>
             <select id="dropdown">
             </select>
-        <input type="button" id="btn1" value="Filter" onclick="displaySongs()">
+        <input type="button" id="btn1" value="Filter">
     </form>
     <div id="results">
     </div>
@@ -19,6 +19,7 @@
     <script language="javascript">
         //GLOBAL VAR
         let range = new Set ();
+        let rep = []
        //Read in JSON data
         $(document).ready(function () {
         //JSON data retrieved/stored in 'data'
