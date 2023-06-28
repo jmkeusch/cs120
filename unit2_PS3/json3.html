@@ -7,7 +7,22 @@
   </head>
 
   <body>
+    <form name="form1">
+        <label for="dropdown">Genre:</label>
+            <select id="dropdown">
+            </select>
+        <input type="button" id="btn1" value="Filter">
+    </form>
+
     <script language="javascript">
+        //Populate genre options on form
+       window.onload = function popOptions() {
+            var listItem = "";
+            range.forEach (function(value) {
+            listItem += "<option value='" + value + "'>" + value + "</option>";
+            $("#dropdown").html(listItem);
+            })
+       }
         //read in JSON data
         document.write("test");
         //GLOBAL VARS
@@ -26,22 +41,8 @@
             popOptions();
         });
        });
-       //Populate genre options on form
-       window.onload = function popOptions() {
-            range.forEach (function(value) {
-            listItem += "<option value='" + value + "'>" + value + "</option>";
-            $("#dropdown").html(listItem);
-            })
-       }
        
     </script>
-
-    <form name="form1">
-        <label for="dropdown">Genre:</label>
-            <select id="dropdown" onchange="selectedIndex()">
-            </select>
-        <input type="button" id="btn1" value="Filter">
-    </form>
   </body>
 </html>
 
