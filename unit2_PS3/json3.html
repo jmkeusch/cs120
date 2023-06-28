@@ -40,27 +40,27 @@
             })
        }
 
-        // window.onload = function displaySongs() {
-        //     let genre = document.getElementById("dropdown").selectedIndex;
-        //     var genres = value.genre;
-        //     var isMatch = false;
-        //     range.forEach (function(value) {
-        //     $.get("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
-        //         $.each(data, function (key, value) {
-        //             for (let i = 0; i < genres.length; i++) {
-        //                 var gen = value.genre[i];
-        //                 if (gen == genre) {
-        //                     isMatch = true;
-        //                     break;
-        //                 }
-        //             }
-        //         if (isMatch) {
-        //             document.write(value.title + "<br>");
-        //         }
-        //         })
-        //     })
-        //     })
-        // }
+        window.onload = function displaySongs() {
+            let genre = document.getElementById("dropdown").selectedIndex;
+            var genres = value.genre;
+            var isMatch = false;
+            range.forEach (function(value) {
+            $.get("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
+                $.each(data, function (key, value) {
+                    for (let i = 0; i < genres.length; i++) {
+                        var gen = value.genre[i];
+                        if (gen == genre) {
+                            isMatch = true;
+                            break;
+                        }
+                    }
+                if (isMatch) {
+                    document.write(value.title + "<br>");
+                }
+                })
+            })
+            })
+        }
 
 
         //read in JSON data
