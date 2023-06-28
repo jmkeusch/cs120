@@ -19,6 +19,9 @@
                 document.write("Artist: " + value.artist + "<br>");
                 document.write("Released: " + value.year + "<br>");
                 document.write("Genre: ");
+                for (let i = 0; i < genres.length; i++) {
+                    document.write(genres[i] + " ");
+                }
                 document.write("<br><br>");
             });
         });
