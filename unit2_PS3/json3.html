@@ -24,7 +24,7 @@
             $.each(data, function (key, value) {
                 var genres = value.genre;
                 for (let i = 0; i < genres.length; i++) {
-                    var gen = JSON.stringify(value.genre[i]);
+                    var gen = value.genre[i];
                     range.add(gen);
                 }
             });
