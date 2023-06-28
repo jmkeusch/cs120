@@ -55,10 +55,7 @@
                         // for each genre in array
                         for (let i = 0; i < value.genre.length; i++) {
                             g = JSON.stringify(value.genre[i]);
-                            if (sel == g) {
-                                console.log(value.title);
-                                break;
-                            }
+                            document.write(sel + " " + g + " " + value.title);
                         }
                     })
                 }
