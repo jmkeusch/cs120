@@ -10,10 +10,11 @@
     <script language="javascript">
         //read in JSON data
         document.write("test");
+        //GLOBAL VARS
+        let range = new Set ();
        $(document).ready(function () {
         //JSON data retrieved/stored in 'data'
         $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
-        let range = new Set ();
             //Get Genre options
             $.each(data, function (key, value) {
                 var genres = value.genre;
@@ -37,6 +38,7 @@
         <label for="dropdown">Genre:</label>
             <select id="dropdown" onchange="selectedIndex()">
             </select>
+        <input type="button" id="btn1" value="Filter">
     </form>
   </body>
 </html>
