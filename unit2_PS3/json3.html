@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Unit 2 | PS3 | JSON 2</title>
+    <title>Unit 2 | PS3 | JSON 3</title>
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   </head>
 
@@ -10,26 +10,41 @@
     <script language="javascript">
         document.write("test");
        $(document).ready(function () {
+        //JSON data retrieved/stored in 'data'
         $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
-    
+            //Get Genre options
             $.each(data, function (key, value) {
                 var genres = value.genre;
-                document.write(value.title + "<br>");
-                document.write("Artist: " + value.artist + "<br>");
-                document.write("Released: " + value.year + "<br>");
-                document.write("Genre: ");
+                var range = new Set ();
                 for (let i = 0; i < genres.length; i++) {
-                    if (i == genres.length - 1) {
-                        document.write(genres[i]);
-                    } else {
-                        document.write(genres[i] + ", ");
-                    }
+                    var gen = JSON.stringify(value.genre[i]);
+                    range.add(gen);
+                    console.log(gen + "<br>");
                 }
-                document.write("<br><br>");
+
+
+
+                // document.write(value.title + "<br>");
+                // document.write("Artist: " + value.artist + "<br>");
+                // document.write("Released: " + value.year + "<br>");
+                // document.write("Genre: ");
+                // for (let i = 0; i < genres.length; i++) {
+                //     if (i == genres.length - 1) {
+                //         document.write(genres[i]);
+                //     } else {
+                //         document.write(genres[i] + ", ");
+                //     }
+                // }
+                // document.write("<br><br>");
             });
         });
        });
     </script>
+    <form name="form1">
+        <label for="dropdown">Genre:</label>
+            <select id="dropdown" onchange="selectedIndex()">
+            </select>
+    </form>
   </body>
 </html>
 
