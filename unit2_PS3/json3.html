@@ -47,18 +47,20 @@
             let interest = document.getElementById("dropdown").selectedIndex;
             var types = value.genre;
             var isMatch = false;
-            $.get("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
-                $.each(data, function (key, value) {
-                    for (let i = 0; i < types.length; i++) {
-                        if (interest == types[i]) {
-                            isMatch = true;
-                            break;
+            $(document).ready(function () {
+                $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json"), function (data) {
+                    $.each(data, function (key, value) {
+                        for (let i = 0; i < types.length; i++) {
+                            if (interest == types[i]) {
+                                isMatch = true;
+                                break;
+                            }
                         }
+                    if (isMatch == true) {
+                        document.write(value.title + "<br>");
                     }
-                if (isMatch == true) {
-                    console.log(value.title + "<br>");
+                    })
                 }
-                })
             })
         }
        
