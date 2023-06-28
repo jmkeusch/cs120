@@ -44,26 +44,26 @@
             })
        }
 
-        window.onload = function displaySongs() {
-            let interest = document.getElementById("dropdown").selectedIndex;
-            var isMatch = false;
-            $(document).ready(function () {
-                $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json"), function (data) {
-                    var types = value.genre;
-                    $.each(data, function (key, value) {
-                        for (let i = 0; i < types.length; i++) {
-                            if (interest == types[i]) {
-                                isMatch = true;
-                                break;
-                            }
-                        }
-                    if (isMatch == true) {
-                        document.write(value.title + "<br>");
-                    }
-                    })
-                }
-            })
-        }
+        // window.onload = function displaySongs() {
+        //     let interest = document.getElementById("dropdown").selectedIndex;
+        //     var isMatch = false;
+        //     $(document).ready(function () {
+        //         $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json"), function (data) {
+        //             var types = value.genre;
+        //             $.each(data, function (key, value) {
+        //                 for (let i = 0; i < types.length; i++) {
+        //                     if (interest == types[i]) {
+        //                         isMatch = true;
+        //                         break;
+        //                     }
+        //                 }
+        //             if (isMatch == true) {
+        //                 document.write(value.title + "<br>");
+        //             }
+        //             })
+        //         }
+        //     })
+        // }
 
 
             // $.get("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
