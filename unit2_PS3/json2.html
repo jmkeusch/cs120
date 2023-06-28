@@ -7,7 +7,6 @@
   </head>
 
   <body>
-    <H2>JSON 2</H2>
     <script language="javascript">
         document.write("test");
        $(document).ready(function () {
@@ -20,7 +19,11 @@
                 document.write("Released: " + value.year + "<br>");
                 document.write("Genre: ");
                 for (let i = 0; i < genres.length; i++) {
-                    document.write(genres[i] + " ");
+                    if (i == genres.length - 1) {
+                        document.write(genres[i]);
+                    } else {
+                        document.write(genres[i] + ", ");
+                    }
                 }
                 document.write("<br><br>");
             });
