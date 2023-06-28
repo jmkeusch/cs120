@@ -3,54 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Unit 2 | PS3 | JSON 3</title>
-        <script src="https://code.jquery.com/jquery-3.5.1.js" language="javascript">
-            //GLOBAL VAR
-            let range = new Set ();
-            //Read in JSON data
-            $(document).ready(function () {
-            //JSON data retrieved/stored in 'data'
-            $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
-                //Get Genre options
-                $.each(data, function (key, value) {
-                    var genres = value.genre;
-                    for (let i = 0; i < genres.length; i++) {
-                        var gen = value.genre[i];
-                        range.add(gen);
-                        }
-                    });
-                });
-            });
-
-            //Populate genre options on form
-            window.onload = function popOptions() {
-                var listItem = "";
-                range.forEach (function(value) {
-                listItem += "<option value='" + value + "'>" + value + "</option>";
-                $("#dropdown").html(listItem);
-                })
-            }
-
-            function displaySongs() {
-                let interest = document.getElementById("dropdown").selectedIndex;
-                var types = value.genre;
-                var isMatch = false;
-                $(document).ready(function () {
-                    $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json"), function (data) {
-                        $.each(data, function (key, value) {
-                            for (let i = 0; i < types.length; i++) {
-                                if (interest == types[i]) {
-                                    isMatch = true;
-                                    break;
-                                }
-                            }
-                        if (isMatch == true) {
-                            document.write(value.title + "<br>");
-                        }
-                        })
-                    }
-                })
-            }
-            </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   </head>
 
   <body>
@@ -62,6 +15,72 @@
     </form>
     <div id="results">
     </div>
+
+    <script language="javascript">
+        //GLOBAL VAR
+        let range = new Set ();
+       //Read in JSON data
+        $(document).ready(function () {
+        //JSON data retrieved/stored in 'data'
+        $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
+            //Get Genre options
+            $.each(data, function (key, value) {
+                var genres = value.genre;
+                for (let i = 0; i < genres.length; i++) {
+                    var gen = value.genre[i];
+                    range.add(gen);
+                }
+            });
+        });
+       });
+
+       //Populate genre options on form
+       window.onload = function popOptions() {
+            var listItem = "";
+            range.forEach (function(value) {
+            listItem += "<option value='" + value + "'>" + value + "</option>";
+            $("#dropdown").html(listItem);
+            })
+       }
+
+        function displaySongs() {
+            let interest = document.getElementById("dropdown").selectedIndex;
+            var types = value.genre;
+            var isMatch = false;
+            $(document).ready(function () {
+                $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json"), function (data) {
+                    $.each(data, function (key, value) {
+                        for (let i = 0; i < types.length; i++) {
+                            if (interest == types[i]) {
+                                isMatch = true;
+                                break;
+                            }
+                        }
+                    if (isMatch == true) {
+                        document.write(value.title + "<br>");
+                    }
+                    })
+                }
+            })
+        }
+
+
+            $.get("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
+                $.each(data, function (key, value) {
+                    for (let i = 0; i < types.length; i++) {
+                        if (interest == types[i]) {
+                            isMatch = true;
+                            break;
+                        }
+                    }
+                if (isMatch == true) {
+                    console.log(value.title + "<br>");
+                }
+                })
+            })
+        
+       
+    </script>
   </body>
 </html>
 
