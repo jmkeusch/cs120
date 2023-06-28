@@ -8,6 +8,7 @@
 
   <body>
     <script language="javascript">
+        //read in JSON data
         document.write("test");
        $(document).ready(function () {
         //JSON data retrieved/stored in 'data'
@@ -21,25 +22,17 @@
                     range.add(gen);
                     document.write(gen);
                 }
-
-
-
-                // document.write(value.title + "<br>");
-                // document.write("Artist: " + value.artist + "<br>");
-                // document.write("Released: " + value.year + "<br>");
-                // document.write("Genre: ");
-                // for (let i = 0; i < genres.length; i++) {
-                //     if (i == genres.length - 1) {
-                //         document.write(genres[i]);
-                //     } else {
-                //         document.write(genres[i] + ", ");
-                //     }
-                // }
-                // document.write("<br><br>");
             });
         });
        });
+       //Populate genre options on form
+       range.forEach (function(value) {
+        listItem += "<option value='" + value + "'>" + value + "</option>";
+        $("#dropdown").html(listItem);
+       })
+       
     </script>
+    
     <form name="form1">
         <label for="dropdown">Genre:</label>
             <select id="dropdown" onchange="selectedIndex()">
