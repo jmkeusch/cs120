@@ -17,6 +17,20 @@
     <script language="javascript">
         //GLOBAL VAR
         let range = new Set ();
+        $(document).ready(function () {
+        //JSON data retrieved/stored in 'data'
+        $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
+            //Get Genre options
+            $.each(data, function (key, value) {
+                var genres = value.genre;
+                for (let i = 0; i < genres.length; i++) {
+                    var gen = JSON.stringify(value.genre[i]);
+                    range.add(gen);
+                }
+            });
+            popOptions();
+        });
+       });
         //Populate genre options on form
         window.onload = function popOptions() {
             var listItem = "";
