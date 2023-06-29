@@ -21,7 +21,7 @@
 
     <script language="javascript">
         //GLOBAL VARS
-        //object = "";
+        object = new Object ();
         range = new Set ();
 
         //Read in JSON data
@@ -42,6 +42,7 @@
 
         //Definition to pop genre options on form
         window.onload = function popOptions() {
+            document.write("pop");
             let listItem = "";
             range.forEach (function(value) {
             listItem += "<option value='" + value + "'>" + value + "</option>";
