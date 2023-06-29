@@ -42,17 +42,16 @@
         })
 
         //Definition to pop genre options on form
-        function popOptions(range) {
+        window.onload = function popOptions(range) {
             console.log("In popOptions()")
             let listItem = "";
             range.forEach (function(value) {
                 console.log("Adding " + this.value)
-                listItem += "<option value='" + this.value + "'>" + this.value + "</option>"
+                listItem += "<option value='" + value + "'>" + value + "</option>"
                 $("#dropdown").html(listItem);
             })
         }
 
-        options = popOptions(range);
 
         //    //Populate genre options on form
         //    function popOptions() {
