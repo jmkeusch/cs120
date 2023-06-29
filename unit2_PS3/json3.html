@@ -19,7 +19,7 @@
     <script language="javascript">
         //GLOBAL VAR
         let range = new Set ();
-        let rep = [];
+        let rep = []
        //Read in JSON data
         $(document).ready(function () {
         //JSON data retrieved/stored in 'data'
@@ -50,10 +50,10 @@
         function displaySongs() {
             //let interest = document.getElementById("dropdown").selectedIndex.value;
             //document.write("sel is: " + sel);
-            //$(document).ready(function () {
+            $(document).ready(function () {
                 $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json"), function (data) {
                     var sel = $("#dropdown :selected").text();
-                    //each JSON objs
+                    //each JSON obj
                     $.each(data, function (key, value) {
                         //each genre array
                         $.each(this.genre, function(sel, value) {
@@ -63,7 +63,7 @@
                         })
                     })
                 }
-            //})//here
+            })
         }       
     </script>
   </body>
