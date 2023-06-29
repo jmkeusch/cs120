@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" 
+            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
+            crossorigin="anonymous">
+    </script>
     <title>Unit 2 | PS3 | JSON 3</title>
-        <script src="https://code.jquery.com/jquery-3.7.0.min.js" 
-                integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
-                crossorigin="anonymous">
-        </script>
   </head>
 
   <body>
@@ -21,6 +21,18 @@
 
     <script language="javascript">
         //GLOBAL VAR
+        range = new Set ();
+
+        //Read in JSON data
+        $(window).onload(function () {
+            $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
+                $.each(data, function(key, value) {
+                    var genres = value.genre;
+                })
+            })
+        })
+
+
     //     var range = new Set ();
     //     //let rep = []
     //     //Read in JSON data
