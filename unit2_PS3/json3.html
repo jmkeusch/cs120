@@ -44,16 +44,11 @@
             })
         }
         
-        // //Event handler
-        // window.onload=function() {
-        //     btnObj = document.getElementById("btn1");
-        //     btnObj = (e) => console.log("button succes");
-        // }
-
-
-        // function buttonClick(e) {
-        //     console.log("button clicked");
-        // }
+        //event handler
+        window.onload=function() {
+            btnObj= document.getElementById("btn1");
+            btnObj.onclick = (e) => alert("You pressed "+ e.target.value + "!") 
+        }// end for
 
 
         // function displaySongs() {
