@@ -11,7 +11,7 @@
         <label for="dropdown">Genre:</label>
             <select id="dropdown">
             </select>
-        <input type="button" id="btn1" value="Filter">
+        <input type="button" value="Filter" id="btn1">
     </form>
     <div id="results">
     </div>
@@ -19,7 +19,7 @@
     <script language="javascript">
         //GLOBAL VAR
         let range = new Set ();
-        let rep = []
+        //let rep = []
        //Read in JSON data
         $(document).ready(function () {
         //JSON data retrieved/stored in 'data'
@@ -43,15 +43,14 @@
             $("#dropdown").html(listItem);
             })
         }
-        function match(selection) {
-            
-        }
+        
         //Event handler
         window.onload=function() {
-            document.getElementById("btn1").onclick = testFxn;
+            document.getElementById("btn1").onclick = buttonClick;
         }
 
-        function testFxn(e) {
+
+        function buttonClick(e) {
             console.log("button clicked");
         }
 
