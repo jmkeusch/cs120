@@ -20,9 +20,19 @@
     </div>
 
     <script language="javascript">
-        //GLOBAL VAR
+        //GLOBAL VARS
         object = "";
         range = new Set ();
+
+        //Populate genre options on form
+        window.onload = function popOptions() {
+            let listItem = "";
+            range.forEach (function(value) {
+            listItem += "<option value='" + value + "'>" + value + "</option>";
+            $("#dropdown").html(listItem);
+            })
+            return;
+        }
 
         //Read in JSON data
         $(document).ready(function () {
@@ -39,18 +49,11 @@
                     }
                 })
             })
+            popOptions();
         })
 
-        //Populate genre options on form
-        window.onload = function popOptions() {
-            let listItem = "";
-            range.forEach (function(value) {
-            listItem += "<option value='" + value + "'>" + value + "</option>";
-            $("#dropdown").html(listItem);
-            })
-        }
 
-        popOptions();
+        
 
         //    //Populate genre options on form
         //    function popOptions() {
