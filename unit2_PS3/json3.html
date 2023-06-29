@@ -28,6 +28,11 @@
             $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
                 $.each(data, function(key, value) {
                     var genres = value.genre;
+                    for (let i = 0; i < genres.length; i++) {
+                        var gen = value.genre[i]
+                        range.add(gen)
+                        console.log("Reading " + gen)
+                    }
                 })
             })
         })
