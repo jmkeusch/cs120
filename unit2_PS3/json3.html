@@ -21,32 +21,32 @@
 
     <script language="javascript">
         //GLOBAL VAR
-        var range = new Set ();
-        //let rep = []
-        //Read in JSON data
-        $(window).load(function () {
-        //JSON data retrieved/stored in 'data'
-        $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
-            //Get Genre options
-            $.each(data, function (key, value) {
-                var genres = value.genre;
-                for (let i = 0; i < genres.length; i++) {
-                    var gen = value.genre[i];
-                    range.add(gen);
-                }
-            })
-        })
-        popOptions();
-       })
+    //     var range = new Set ();
+    //     //let rep = []
+    //     //Read in JSON data
+    //     $(window).load(function () {
+    //     //JSON data retrieved/stored in 'data'
+    //     $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
+    //         //Get Genre options
+    //         $.each(data, function (key, value) {
+    //             var genres = value.genre;
+    //             for (let i = 0; i < genres.length; i++) {
+    //                 var gen = value.genre[i];
+    //                 range.add(gen);
+    //             }
+    //         })
+    //     })
+    //     popOptions();
+    //    })
 
-       //Populate genre options on form
-       function popOptions() {
-            var listItem = "";
-            range.forEach (function(value) {
-            listItem += "<option value='" + value + "'>" + value + "</option>";
-            $("#dropdown").html(listItem);
-            })
-        }
+    //    //Populate genre options on form
+    //    function popOptions() {
+    //         var listItem = "";
+    //         range.forEach (function(value) {
+    //         listItem += "<option value='" + value + "'>" + value + "</option>";
+    //         $("#dropdown").html(listItem);
+    //         })
+    //     }
         
         //event handler
         // window.onload=function() {
