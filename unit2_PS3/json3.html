@@ -47,8 +47,8 @@
             let listItem = "";
             range.forEach (function(value) {
                 console.log("adding " + this.value)
-            listItem += "<option value='" + this.value + "'>" + this.value + "</option>";
-            $("#dropdown").html(listItem);
+                listItem += "<option value='" + this.value + "'>" + this.value + "</option>"
+                $("#dropdown").html(listItem);
             })
         }
 
