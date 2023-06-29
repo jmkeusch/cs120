@@ -53,7 +53,7 @@
             //$(document).ready(function () {
                 $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json"), function (data) {
                     var sel = $("#dropdown :selected").text();
-                    //each JSON obj
+                    //each JSON objs
                     $.each(data, function (key, value) {
                         //each genre array
                         $.each(this.genre, function(sel, value) {
