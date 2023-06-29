@@ -27,13 +27,12 @@
         //Read in JSON data
         $(document).ready(function () {
             //Definition to pop genre options on form
-            function popOptions() {
+            window.onload = function popOptions() {
                 let listItem = "";
                 range.forEach (function(value) {
                 listItem += "<option value='" + value + "'>" + value + "</option>";
                 $("#dropdown").html(listItem);
                 })
-                return;
             }
 
             $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
@@ -43,13 +42,13 @@
                 $.each(data, function(key, value) {
                     var genres = value.genre;
                     for (let i = 0; i < genres.length; i++) {
-                        var gen = value.genre[i]
-                        range.add(gen)
-                        console.log("Reading " + gen)
+                        var gen = value.genre[i];
+                        range.add(gen);
+                        console.log("Reading " + gen);
                     }
                 })
             })
-            popOptions();
+            //popOptions();
         })
 
 
