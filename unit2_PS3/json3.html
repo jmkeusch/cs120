@@ -19,7 +19,7 @@
     <div id="results">
     </div>
 
-    <!-- <script language="javascript">
+    <script language="javascript">
         //GLOBAL VARS
         object = "";
         range = new Set ();
@@ -38,39 +38,11 @@
                     }
                 })
             })
-            
         })
 
         //Definition to pop genre options on form
         window.onload = function popOptions() {
-                let listItem = "";
-                range.forEach (function(value) {
-                listItem += "<option value='" + value + "'>" + value + "</option>";
-                $("#dropdown").html(listItem);
-                })
-            } -->
-        
-        <script language="javascript">
-        //GLOBAL VAR
-        let range = new Set ();
-        let rep = [];
-       //Read in JSON data
-        $(document).ready(function () {
-        //JSON data retrieved/stored in 'data'
-        $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
-            //Get Genre options
-            $.each(data, function (key, value) {
-                var genres = value.genre;
-                for (let i = 0; i < genres.length; i++) {
-                    var gen = value.genre[i];
-                    range.add(gen);
-                }
-            });
-        });
-        });
-        //Populate genre options on form
-        window.onload = function popOptions() {
-            var listItem = "";
+            let listItem = "";
             range.forEach (function(value) {
             listItem += "<option value='" + value + "'>" + value + "</option>";
             $("#dropdown").html(listItem);
