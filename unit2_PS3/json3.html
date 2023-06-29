@@ -39,19 +39,20 @@
                     }
                 })
             })
-            //Definition to pop genre options on form
-            window.onload = function popOptions() {
-                console.log("In popOptions()")
-                let listItem = "";
-                range.forEach (function(value) {
-                    console.log("Adding " + this.value)
-                    listItem += "<option value='" + this.value + "'>" + this.value + "</option>"
-                    $("#dropdown").html(listItem);
-                })
-            }
         })
 
+        //Definition to pop genre options on form
+        function popOptions() {
+            console.log("In popOptions()")
+            let listItem = "";
+            range.forEach (function(value) {
+                console.log("Adding " + this.value)
+                listItem += "<option value='" + this.value + "'>" + this.value + "</option>"
+                $("#dropdown").html(listItem);
+            })
+        }
 
+        options = popOptions();
 
         //    //Populate genre options on form
         //    function popOptions() {
