@@ -18,7 +18,7 @@
 
     <script language="javascript">
         //GLOBAL VAR
-        let range = new Set ();
+        var range = new Set ();
         //let rep = []
         //Read in JSON data
         $(document).ready(function () {
@@ -45,14 +45,14 @@
         }
         
         //Event handler
-        // window.onload=function() {
-        //     document.getElementById("btn1").onclick= buttonClick;
-        // }
+        window.onload=function() {
+            document.getElementById("btn1").onclick= buttonClick;
+        }
 
 
-        // function buttonClick(e) {
-        //     console.log("button clicked")
-        // }
+        function buttonClick(e) {
+            console.log("button clicked")
+        }
 
 
         function displaySongs() {
