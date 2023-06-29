@@ -42,7 +42,7 @@
         })
 
         //Definition to pop genre options on form
-        window.onload = function popOptions() {
+        function popOptions() {
             console.log("In popOptions()")
             let listItem = "";
             range.forEach (function(value) {
@@ -52,6 +52,7 @@
             })
         }
 
+        popOptions();
 
         //    //Populate genre options on form
         //    function popOptions() {
