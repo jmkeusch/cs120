@@ -24,18 +24,18 @@
         object = "";
         range = new Set ();
 
-        //Populate genre options on form
-        function popOptions() {
-            let listItem = "";
-            range.forEach (function(value) {
-            listItem += "<option value='" + value + "'>" + value + "</option>";
-            $("#dropdown").html(listItem);
-            })
-            return;
-        }
-
         //Read in JSON data
         $(document).ready(function () {
+            //Definition to pop genre options on form
+            function popOptions() {
+                let listItem = "";
+                range.forEach (function(value) {
+                listItem += "<option value='" + value + "'>" + value + "</option>";
+                $("#dropdown").html(listItem);
+                })
+                return;
+            }
+
             $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
                 strObject = JSON.stringify(data);
                 object = JSON.parse(strObject);
@@ -49,7 +49,7 @@
                     }
                 })
             })
-            popOptions()
+            popOptions();
         })
 
 
