@@ -46,12 +46,13 @@
         
         //Event handler
         window.onload=function() {
-            document.getElementById("btn1").onclick= buttonClick;
+            btnObj = document.getElementById("btn1");
+            btnObj = (e) => console.log("button succes");
         }
 
 
         function buttonClick(e) {
-            console.log("button clicked")
+            console.log("button clicked");
         }
 
 
