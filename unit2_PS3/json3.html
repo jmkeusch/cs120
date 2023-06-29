@@ -20,7 +20,7 @@
         //GLOBAL VAR
         let range = new Set ();
         //let rep = []
-       //Read in JSON data
+        //Read in JSON data
         $(document).ready(function () {
         //JSON data retrieved/stored in 'data'
         $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
@@ -55,24 +55,24 @@
         }
 
 
-        // function displaySongs() {
-        //     console.log("in display songs");
-        //     let interest = document.getElementById("dropdown").selectedIndex.value;
-        //     document.write("sel is: " + sel);
+        function displaySongs() {
+            console.log("in display songs");
+            let interest = document.getElementById("dropdown").selectedIndex.value;
+            document.write("sel is: " + sel);
 
-        //     $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json"), function (data) {
-        //             var sel = $("#dropdown :selected").text();
-        //             //each JSON obj
-        //             $.each(data, function (key, value) {
-        //                 //each genre array
-        //                 $.each(this.genre, function(sel, value) {
-        //                     if (sel == this.value) {
-        //                         console.log(title.value);
-        //                     }
-        //                 })
-        //             })
-        //         }
-        //     }       
+            $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json"), function (data) {
+                    var sel = $("#dropdown :selected").text();
+                    //each JSON obj
+                    $.each(data, function (key, value) {
+                        //each genre array
+                        $.each(this.genre, function(sel, value) {
+                            if (sel == this.value) {
+                                console.log(title.value);
+                            }
+                        })
+                    })
+                }
+            }       
 
     </script>
   </body>
