@@ -25,7 +25,7 @@
         range = new Set ();
 
         //Populate genre options on form
-        function popOptions() {
+        window.onload = function popOptions() {
             let listItem = "";
             range.forEach (function(value) {
             listItem += "<option value='" + value + "'>" + value + "</option>";
