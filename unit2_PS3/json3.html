@@ -47,24 +47,34 @@
             
         }
         //Event handler
-        function displaySongs() {
-            console.log("in display songs");
-            let interest = document.getElementById("dropdown").selectedIndex.value;
-            document.write("sel is: " + sel);
+        window.onload=function() {
+            document.getElementById("btn1").onclick = testFxn;
+        }
 
-            $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json"), function (data) {
-                    var sel = $("#dropdown :selected").text();
-                    //each JSON obj
-                    $.each(data, function (key, value) {
-                        //each genre array
-                        $.each(this.genre, function(sel, value) {
-                            if (sel == this.value) {
-                                console.log(title.value);
-                            }
-                        })
-                    })
-                }
-            }       
+        function testFxn(e) {
+            console.log("button clicked");
+        }
+
+
+        // function displaySongs() {
+        //     console.log("in display songs");
+        //     let interest = document.getElementById("dropdown").selectedIndex.value;
+        //     document.write("sel is: " + sel);
+
+        //     $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json"), function (data) {
+        //             var sel = $("#dropdown :selected").text();
+        //             //each JSON obj
+        //             $.each(data, function (key, value) {
+        //                 //each genre array
+        //                 $.each(this.genre, function(sel, value) {
+        //                     if (sel == this.value) {
+        //                         console.log(title.value);
+        //                     }
+        //                 })
+        //             })
+        //         }
+        //     }       
+
     </script>
   </body>
 </html>
