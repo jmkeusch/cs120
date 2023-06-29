@@ -42,10 +42,11 @@
 
         //Definition to pop genre options on form
         window.onload = function popOptions() {
-            document.write("pop");
+            console.log("In popOptions()")
             let listItem = "";
             range.forEach (function(value) {
-            listItem += "<option value='" + value + "'>" + value + "</option>";
+                console.log("adding " + this.value)
+            listItem += "<option value='" + this.value + "'>" + this.value + "</option>";
             $("#dropdown").html(listItem);
             })
         }
