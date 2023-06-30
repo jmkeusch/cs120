@@ -54,7 +54,7 @@
             btnObj.onclick = () => {
                 let sel = $("#dropdown").val();
                 console.log(sel + " selected");
-                document.getElementById('output').innerHTML = "";
+                document.getElementById('output').innerHTML = "<br>";
                 object.forEach(function(key) {
                     gen = key.genre;
                     for (let i = 0; i < gen.length; i++) {
