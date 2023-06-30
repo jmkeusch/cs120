@@ -24,46 +24,26 @@
         object = new Object ();
         range = new Set ();
 
-        //Read in JSON data
-        function getJSON() {
+        $(document).ready(function () {
             $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
-                console.log("In getJSON")
-                strObject = JSON.stringify(data)
-                object = JSON.parse(strObject)
-
-                $.each(data, function(key, value) {
-                    genres = value.genre;
+                $.each(data, function (key, value) {
+                    let genres = value.genre;
                     for (let i = 0; i < genres.length; i++) {
-                        gen = value.genre[i];
-                        console.log("Adding to set: " + gen)
+                        let gen = value.genre[i];
                         range.add(gen);
+                        console.log("Retriving " + gen);
                     }
                 })
             })
-        //})
-        }
-
-        //Definition to pop genre options on form
-        function populate() {
-            console.log("In populate()")
-            let listItem = "";
-            range.forEach (function(value) {
-                console.log("Adding option: " + value)
-                listItem += "<option value='" + value + "'>" + value + "</option>"
-                $("#dropdown").html(listItem)
-            })
-        }
-        
-        getJSON();
-        populate();
+        })
 
 
 
-        //event handler
-        window.onload=function() {
-            btnObj= document.getElementById("btn1");
-            btnObj.onclick = () => alert("You pressed "+ btnObj.value + "!") 
-        }// end for
+        // //event handler
+        // window.onload=function() {
+        //     btnObj= document.getElementById("btn1");
+        //     btnObj.onclick = () => alert("You pressed "+ btnObj.value + "!") 
+        // }// end for
 
 
 
