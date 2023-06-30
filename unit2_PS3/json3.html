@@ -41,9 +41,11 @@
         window.onload = function populate() {
             let listItem = "";
             range.forEach (function(value) {
-            listItem += "<option value='" + value + "'>" + value + "</option>";
-            console.log("Adding " + value);
-            $("#dropdown").html(listItem);
+                $('#dropdown').append("<option value=" + value + ">" + value + "</option>");
+
+                // listItem += "<option value='" + value + "'>" + value + "</option>";
+                // console.log("Adding " + value);
+                // $("#dropdown").html(listItem);
             })
         }
 
