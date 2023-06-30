@@ -67,8 +67,9 @@
                 object.forEach(function(key) {
                     gen = key.genre;
                     gen.forEach(function(val) {
-                        if (gen == sel) {
-                            console.log(key.title + "'s " + gen + " matches sel " + sel);
+                        console.log("reviewing at " + key + "'s " + gen);
+                        if (sel == gen) {
+                            console.log ("Match found on " + key.title + " " + key + " = " + gen);
                         }
                     })
                 })
