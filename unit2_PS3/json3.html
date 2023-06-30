@@ -14,28 +14,28 @@
         <label for="dropdown">Genre:</label>
             <select id="dropdown">
             </select>
-        <input type="button" value="Filter" id="btn1">
+        <input type="button" id="btn1" value="Filter">
     </form>
     <div id="results">
     </div>
 
     <script language="javascript">
         //GLOBAL VARS
-        object = new Object ();
         range = new Set ();
+        object = new Object ();
 
         $(document).ready(function () {
             $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
                 $.each(data, function (key, value) {
-                    let genres = value.genre;
+                    var genres = value.genre;
                     for (let i = 0; i < genres.length; i++) {
-                        let gen = value.genre[i];
+                        var gen = value.genre[i];
                         range.add(gen);
                         console.log("Retrieving " + gen);
                     }
                 });
-            })
-        })
+            });
+        });
 
         window.onload = function populate() {
             let listItem = "";
