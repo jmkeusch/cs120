@@ -25,7 +25,7 @@
         range = new Set ();
 
         //Read in JSON data
-        //$(document).ready(function () {
+        window.onload = function getJSON() {
             $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
                 strObject = JSON.stringify(data);
                 object = JSON.parse(strObject);
@@ -40,6 +40,7 @@
                 })
             })
         //})
+        }
 
         //Definition to pop genre options on form
         function populate() {
@@ -53,6 +54,15 @@
         }
         
         populate();
+
+
+
+        //event handler
+        // window.onload=function() {
+        //     btnObj= document.getElementById("btn1");
+        //     btnObj.onclick = () => alert("You pressed "+ btnObj.value + "!") 
+        // }// end for
+
 
 
         //    //Populate genre options on form
