@@ -64,7 +64,7 @@
             btnObj.onclick = () => {
                 $.each(object, function(key, value) { 
                     let genres = object.genres;
-                    let sel = $("#dropdown:selected").text();
+                    let sel = $("#dropdown:selected").value();
                     console.log(sel + " selected");
                     $.each(genres, function(key, value) {
                         if (this.value === sel) {
