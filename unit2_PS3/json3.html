@@ -19,7 +19,7 @@
         let range = new Set ();
         let object = new Object ();
 
-        var populate = function () {
+        window.onload = function populate() {
             console.log("populate called");
             var listItem = "";
             range.forEach (function(value) {
@@ -41,7 +41,7 @@
                     }
                 })
             })
-            populate();
+            pop = populate();
         });
 
         
