@@ -65,7 +65,10 @@
                 let sel = $("#dropdown").val();
                 console.log(sel + " selected");
                 object.forEach(function(key) {
-                    console.log("looking at " + key.title);
+                    gen = key.genre;
+                    gen.forEach(function(val) {
+                        console.log("reviewing at " + key + "'s " + gen);
+                    })
                 })
             }
         } // end for
