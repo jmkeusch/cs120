@@ -64,11 +64,8 @@
             btnObj.onclick = () => {
                 let sel = $("#dropdown").val();
                 console.log(sel + " selected");
-                $.each(object.genre, function(key, value) { 
-                    let genres = object.genres;
-                    $.each(genres, function(index, element) {
-                        console.log(index.value + " " + sel);
-                    })
+                object.forEach(function(key) {
+                    console.log("looking at " + o.title);
                 })
             }
         } // end for
