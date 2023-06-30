@@ -25,7 +25,7 @@
         range = new Set ();
 
         //Read in JSON data
-        window.onload = function getJSON() {
+        function getJSON() {
             $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
                 console.log("In getJSON")
                 strObject = JSON.stringify(data)
