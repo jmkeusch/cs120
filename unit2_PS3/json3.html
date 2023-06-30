@@ -54,13 +54,13 @@
             btnObj.onclick = () => {
                 let sel = $("#dropdown").val();
                 console.log(sel + " selected");
+                document.getElementById('output').innerHTML = "";
                 object.forEach(function(key) {
                     gen = key.genre;
                     for (let i = 0; i < gen.length; i++) {
                         let g = gen[i];
                         if (g == sel) {
                             console.log(key.title + "\'s " + g + " matches " + sel);
-                            document.getElementById('output').innerHTML = "";
                             document.getElementById('output').innerHTML += key.title + "<br>";
                             //document.write(key.title + "<br>");
                         }
