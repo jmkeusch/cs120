@@ -24,14 +24,6 @@
         object = new Object ();
         range = new Set ();
 
-        window.onload = function populate() {
-            let listItem = "";
-            range.forEach (function(value) {
-                listItem += "<option value='" + value + "'>" + value + "</option>";
-                $("#dropdown").html(listItem);
-            })
-        }
-
         $(document).ready(function () {
             $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
                 $.each(data, function (key, value) {
@@ -39,12 +31,20 @@
                     for (let i = 0; i < genres.length; i++) {
                         let gen = value.genre[i];
                         range.add(gen);
-                        console.log("Retriving " + gen);
+                        console.log("Retrieving " + gen);
                     }
                 });
-                populate();
+                //populate();
             })
         })
+
+        window.onload = function populate() {
+            let listItem = "";
+            range.forEach (function(value) {
+                listItem += "<option value='" + value + "'>" + value + "</option>";
+                $("#dropdown").html(listItem);
+            })
+        }
 
 
 
