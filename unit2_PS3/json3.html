@@ -19,18 +19,22 @@
         let range = new Set ();
         let object = new Object ();
 
-        window.onload = function populate() {
-            console.log("populate called");
-            var listItem = "";
-            range.forEach (function(value) {
-                listItem += "<option value='" + value + "'>" + value + "</option>";
-                $("#dropdown").html(listItem);
-                console.log("Adding " + value);
-            })
-            console.log("populate complete");
+        function message() {
+            console.log("Here is test message")
         }
 
         $(document).ready(function () {
+            function populate() {
+                console.log("populate called");
+                var listItem = "";
+                range.forEach (function(value) {
+                    listItem += "<option value='" + value + "'>" + value + "</option>";
+                    $("#dropdown").html(listItem);
+                    console.log("Adding " + value);
+                })
+                console.log("populate complete");
+            }
+
             $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
                 strObj = JSON.stringify(data);
                 object = JSON.parse(strObj);
@@ -47,15 +51,14 @@
             })
         });
 
+        message();
+        message();
 
-
-
-
-        // //event handler
+        //event handler
         window.onload=function() {
             btnObj= document.getElementById("btn1");
             btnObj.onclick = () => alert("You pressed "+ btnObj.value + "!") 
-        }// end for
+        } // end for
 
 
 
