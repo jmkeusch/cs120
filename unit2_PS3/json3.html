@@ -25,7 +25,7 @@
         range = new Set ();
 
         //Read in JSON data
-        function getJSON() {
+        window.onload = function getJSON() {
             $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
                 console.log("In getJSON")
                 strObject = JSON.stringify(data)
@@ -60,10 +60,10 @@
 
 
         //event handler
-        // window.onload=function() {
-        //     btnObj= document.getElementById("btn1");
-        //     btnObj.onclick = () => alert("You pressed "+ btnObj.value + "!") 
-        // }// end for
+        window.onload=function() {
+            btnObj= document.getElementById("btn1");
+            btnObj.onclick = () => alert("You pressed "+ btnObj.value + "!") 
+        }// end for
 
 
 
