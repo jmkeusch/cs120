@@ -13,6 +13,7 @@
             <select id="dropdown">
             </select>
         <input type="button" id="btn1" value="Filter">
+    <div id="output"></div>
 
     <script language="javascript">
         //GLOBAL VARS
@@ -59,7 +60,8 @@
                         let g = gen[i];
                         if (g == sel) {
                             console.log(key.title + "\'s " + g + " matches " + sel);
-                            document.write(key.title + "<br>");
+                            document.getElementById('output').innerHTML += key.title + "<br>";
+                            //document.write(key.title + "<br>");
                         }
                     }
                 })
