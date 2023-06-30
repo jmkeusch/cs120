@@ -20,6 +20,7 @@
         let object = new Object ();
 
         var populate = function () {
+            console.log("populate called");
             var listItem = "";
             range.forEach (function(value) {
                 listItem += "<option value='" + value + "'>" + value + "</option>";
