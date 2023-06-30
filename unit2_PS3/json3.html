@@ -27,14 +27,15 @@
         //Read in JSON data
         function getJSON() {
             $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
-                strObject = JSON.stringify(data);
-                object = JSON.parse(strObject);
+                console.log("In getJSON")
+                strObject = JSON.stringify(data)
+                object = JSON.parse(strObject)
 
                 $.each(data, function(key, value) {
                     genres = value.genre;
                     for (let i = 0; i < genres.length; i++) {
                         gen = value.genre[i];
-                        console.log("Adding to set: " + gen);
+                        console.log("Adding to set: " + gen)
                         range.add(gen);
                     }
                 })
@@ -49,11 +50,11 @@
             range.forEach (function(value) {
                 console.log("Adding option: " + value)
                 listItem += "<option value='" + value + "'>" + value + "</option>"
-                $("#dropdown").html(listItem);
+                $("#dropdown").html(listItem)
             })
         }
         
-        window.onload = getJSON();
+        getJSON();
         populate();
 
 
