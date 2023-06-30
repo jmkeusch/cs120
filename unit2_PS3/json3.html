@@ -66,12 +66,11 @@
                 console.log(sel + " selected");
                 object.forEach(function(key) {
                     gen = key.genre;
-                    gen.forEach(function(val) {
-                        console.log("reviewing at " + key.title + "'s " + gen);
-                        if (sel == gen.value) {
-                            console.log ("Match found on " + key.title + " " + key + " = " + gen);
+                    for (let i = 0; i < gen.length(); i++) {
+                        if (gen == sel) {
+                            console.log("match found on " + gen + " and " + sel);
                         }
-                    })
+                    }
                 })
             }
         } // end for
