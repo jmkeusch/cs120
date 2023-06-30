@@ -34,7 +34,7 @@
         });
 
         window.onload = function populate() {
-            let listItem = "";
+            var listItem = "";
             range.forEach (function(value) {
                 listItem += "<option value='" + value + "'>" + value + "</option>";
                 $("#dropdown").html(listItem);
