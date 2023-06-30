@@ -46,16 +46,10 @@
                         range.add(gen);
                         console.log("Retrieving " + gen);
                     }
-                //let pop = populate();
                 })
                 populate();
             })
         });
-
-        message();
-        message();
-
-
 
         //event handler
         window.onload=function() {
@@ -69,89 +63,13 @@
                     for (let i = 0; i < gen.length; i++) {
                         let g = gen[i];
                         if (g == sel) {
-                            console.log(key.title + +"'s " + g + "matches " + sel);
+                            console.log(key.title + +"\'s " + g + " matches " + sel);
                             document.write(key.title + "<br>");
                         }
                     }
                 })
             }
         } // end for
-
-
-        // $.each(data, function (key, value) {
-        //             var genres = value.genre;
-        //             for (let i = 0; i < genres.length; i++) {
-        //                 var gen = value.genre[i];
-        //                 range.add(gen);
-        //                 console.log("Retrieving " + gen);
-        //             }
-
-
-
-
-        //    //Populate genre options on form
-        //    function popOptions() {
-        //         var listItem = "";
-        //         range.forEach (function(value) {
-        //         listItem += "<option value='" + value + "'>" + value + "</option>";
-        //         $("#dropdown").html(listItem);
-        //         })
-        //     }
-
-
-    //     var range = new Set ();
-    //     //let rep = []
-    //     //Read in JSON data
-    //     $(window).load(function () {
-    //     //JSON data retrieved/stored in 'data'
-    //     $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
-    //         //Get Genre options
-    //         $.each(data, function (key, value) {
-    //             var genres = value.genre;
-    //             for (let i = 0; i < genres.length; i++) {
-    //                 var gen = value.genre[i];
-    //                 range.add(gen);
-    //             }
-    //         })
-    //     })
-    //     popOptions();
-    //    })
-
-    //    //Populate genre options on form
-    //    function popOptions() {
-    //         var listItem = "";
-    //         range.forEach (function(value) {
-    //         listItem += "<option value='" + value + "'>" + value + "</option>";
-    //         $("#dropdown").html(listItem);
-    //         })
-    //     }
-        
-        //event handler
-        // window.onload=function() {
-        //     btnObj= document.getElementById("btn1");
-        //     btnObj.onclick = () => alert("You pressed "+ btnObj.value + "!") 
-        // }// end for
-
-
-        //function displaySongs() {
-            // console.log("in display songs");
-            // let interest = document.getElementById("dropdown").selectedIndex.value;
-            // document.write("sel is: " + sel);
-
-            // $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json"), function (data) {
-            //         var sel = $("#dropdown :selected").text();
-            //         //each JSON obj
-            //         $.each(data, function (key, value) {
-            //             //each genre array
-            //             $.each(this.genre, function(sel, value) {
-            //                 if (sel == this.value) {
-            //                     console.log(title.value);
-            //                 }
-            //             })
-            //         })
-            //     }
-            // }       
-
     </script>
   </body>
 </html>
