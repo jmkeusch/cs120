@@ -2,10 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" 
-            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
-            crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
     <title>Unit 2 | PS3 | JSON 3</title>
   </head>
 
@@ -15,25 +13,12 @@
             <select id="dropdown">
             </select>
         <input type="button" id="btn1" value="Filter">
-    </form>
-    <div id="results">
-    </div>
 
     <script language="javascript">
         //GLOBAL VARS
-        range = new Set ();
-        object = new Object ();
+        let range = new Set ();
+        let object = new Object ();
 
-        window.onload = function populate() {
-            let listItem = "";
-            range.forEach (function(value) {
-                $('#dropdown').append("<option value=" + value + ">" + value + "</option>");
-
-                // listItem += "<option value='" + value + "'>" + value + "</option>";
-                // console.log("Adding " + value);
-                // $("#dropdown").html(listItem);
-            })
-        }
 
         $(document).ready(function () {
             $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
@@ -48,8 +33,17 @@
             });
         });
 
+        window.onload = function populate() {
+            let listItem = "";
+            range.forEach (function(value) {
+                listItem += "<option value='" + value + "'>" + value + "</option>";
+                $("#dropdown").html(listItem);
+                console.log("Adding " + value);
+            })
+        }
 
-        
+
+        populate();
 
 
 
