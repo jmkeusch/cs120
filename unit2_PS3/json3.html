@@ -67,8 +67,8 @@
                 object.forEach(function(key) {
                     gen = key.genre;
                     for (let i = 0; i < gen.length; i++) {
-                        if (gen.value == sel) {
-                            console.log("match found on " + gen + " and " + sel);
+                        if (gen[i].value == sel) {
+                            console.log("match found on " + gen[i] + " and " + sel);
                         }
                     }
                 })
