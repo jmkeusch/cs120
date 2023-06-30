@@ -64,14 +64,13 @@
             btnObj.onclick = () => {
                 $.each(object, function(key, value) { 
                     let genres = object.genres;
-                    let sel = document.getElementById("dropdown").selectedIndex.value;
-                    console.log(sel + "selected");
-                    for (let i = 0; i < genres.length; i++) {
-                        if (sel === genres.value) {
-                            console.log("comparing " + sel + " w " + genres.value);
-                            document.write(object.title.value);
+                    let sel = document.getElementById("dropdown").selectedIndex;
+                    console.log(sel + " selected");
+                    $.each(genres, function(key, value) {
+                        if (this.value === sel.value) {
+                            console.log(sel + " matches " + this.value);
                         }
-                    }
+                    })
                 })
             }
 
