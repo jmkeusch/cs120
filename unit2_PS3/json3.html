@@ -34,15 +34,14 @@
                         console.log("Retrieving " + gen);
                     }
                 });
-                //populate();
             })
         })
 
         window.onload = function populate() {
             let listItem = "";
             range.forEach (function(value) {
-                listItem += "<option value='" + value + "'>" + value + "</option>";
-                $("#dropdown").html(listItem);
+            listItem += "<option value='" + value + "'>" + value + "</option>";
+            $("#dropdown").html(listItem);
             })
         }
 
