@@ -66,7 +66,7 @@
                 console.log(sel + " selected");
                 object.forEach(function(key) {
                     gen = key.genre;
-                    gen.forEach(function() {
+                    gen.forEach(function(val) {
                         if (gen == sel) {
                             console.log(key.title + "'s " + gen + " matches sel " + sel);
                         }
