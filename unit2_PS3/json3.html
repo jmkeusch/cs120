@@ -60,6 +60,7 @@
                         let g = gen[i];
                         if (g == sel) {
                             console.log(key.title + "\'s " + g + " matches " + sel);
+                            document.getElementById('output').innerHTML = "";
                             document.getElementById('output').innerHTML += key.title + "<br>";
                             //document.write(key.title + "<br>");
                         }
