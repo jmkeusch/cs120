@@ -24,6 +24,17 @@
         object = new Object ();
         range = new Set ();
 
+        //Definition to pop genre options on form
+        function popOptions() {
+            console.log("In popOptions()")
+            let listItem = "";
+            range.forEach (function(value) {
+                console.log("Adding option: " + value)
+                listItem += "<option value='" + value + "'>" + value + "</option>"
+                $("#dropdown").html(listItem);
+            })
+        }
+
         //Read in JSON data
         $(document).ready(function () {
             $.getJSON("https://jmkeusch.github.io/cs120/unit2_PS3/songs.json", function (data) {
@@ -41,17 +52,8 @@
             })
         })
 
-        //Definition to pop genre options on form
-        function popOptions() {
-            console.log("In popOptions()")
-            let listItem = "";
-            range.forEach (function(value) {
-                console.log("Adding option: " + value)
-                listItem += "<option value='" + value + "'>" + value + "</option>"
-                $("#dropdown").html(listItem);
-            })
-        }
 
+        
 
         //    //Populate genre options on form
         //    function popOptions() {
