@@ -66,8 +66,10 @@
                 console.log(sel + " selected");
                 object.forEach(function(key) {
                     gen = key.genre;
-                    gen.forEach(function(val) {
-                        console.log("reviewing at " + key + "'s " + gen);
+                    gen.forEach(function() {
+                        if (gen == sel) {
+                            console.log(key.title + "'s " + gen + " matches sel " + sel);
+                        }
                     })
                 })
             }
