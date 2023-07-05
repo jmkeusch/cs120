@@ -16,6 +16,7 @@
             <input type="button" id="api1" name="api1" value="Go">
         </form>
         <div id="return1"></div> <br>
+        <div id="return2"></div> <br>
         <h2>API Description</h2>
         <p>
             This is an API that provides the probablity an individual is from a specific country based on their name passed as a parameter. 
@@ -47,8 +48,6 @@
             btnObj = document.getElementById("api1");
             btnObj.onclick = () => {
                 getNats();
-                //let name = $("#name").val();
-                //document.getElementById("return").innerHTML = name;
             }
         }
 
@@ -57,16 +56,10 @@
             let nats = object1.country;
             let nat = nats.country_id;
             let prob = nats.probability;
+            document.getElementById("return1").innerHTML += "Name: " + name + "<br>";
             for (let i = 0; i < nats.length; i++) {
                 document.getElementById("return1").innterHTML += nat + " " + prob + "<br>";
             }
-            // $.each(obj, function(key, value) {
-            //     nat = key.country.country_id;
-            //     prob = key.country.probability;
-            //     for (let i = 0; i < nat.length; i++) {
-            //         document.getElementById('return1').innerHTML += nat + " " + prob + "<br>";
-            //     }
-            // })
         }
 
         function getNats() {
@@ -85,6 +78,7 @@
                         document.getElementById('return1').innerHTML = ajaxRequest.responseText;
                         response = ajaxRequest.responseText;
                         object1 = JSON.parse(response);
+                        console.log("JSON parsed");
                         prettyPrint();
                     } else {
                         console.log("Status error: " + ajaxRequest.status);
