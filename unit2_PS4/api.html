@@ -58,7 +58,7 @@
             let prob = nats.probability;
             document.getElementById("return1").innerHTML += "Name: " + name + "<br>";
             for (let i = 0; i < nats.length; i++) {
-                document.getElementById("return1").innterHTML += nat + " " + prob + "<br>";
+                document.getElementById("return1").innterHTML += nats[i].nat + " " + nats[i].prob + "<br>";
             }
         }
 
@@ -75,7 +75,7 @@
                     console.log("Request complete");
                     if (ajaxRequest.status == 200) {
                         console.log("File successfully loaded");
-                        document.getElementById('return1').innerHTML = ajaxRequest.responseText;
+                        //document.getElementById('return1').innerHTML = ajaxRequest.responseText;
                         response = ajaxRequest.responseText;
                         object1 = JSON.parse(response);
                         console.log("JSON parsed");
