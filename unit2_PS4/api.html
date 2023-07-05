@@ -76,9 +76,10 @@
                     console.log("Request complete");
                     if (ajaxRequest.status == 200) {
                         console.log("File successfully loaded");
-                        //document.getElementById('return1').innerHTML = ajaxRequest.responseText;
+                        document.getElementById('return1').innerHTML = ajaxRequest.responseText;
                         response = ajaxRequest.responseText;
-                        object1 = JSON.parse(response);
+                        str = JSON.stringify(response);
+                        object1 = JSON.parse(str);
                         console.log("JSON parsed");
                         prettyPrint();
                     } else {
