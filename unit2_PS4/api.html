@@ -39,6 +39,10 @@
         </div>
 
     <script language="javascript">
+        //GLOBAL VARS
+        object1 = new Object;
+        object2 = new Object;
+
         window.onload=function() {
             btnObj = document.getElementById("api1");
             btnObj.onclick = () => {
@@ -48,12 +52,11 @@
             }
         }
 
-        function prettyPrint(text) {
-            obj = JSON.parse(text);
-            let name = obj.name;
-            let nats = obj.country;
-            let nat = nats.country_id.value;
-            let prob = nats.probability.value;
+        function prettyPrint() {
+            let name = object1.name;
+            let nats = object1.country;
+            let nat = nats.country_id;
+            let prob = nats.probability;
             for (let i = 0; i < nats.length; i++) {
                 document.getElementById("return1").innterHTML += nat + " " + prob + "<br>";
             }
@@ -81,7 +84,8 @@
                         console.log("File successfully loaded");
                         document.getElementById('return1').innerHTML = ajaxRequest.responseText;
                         response = ajaxRequest.responseText;
-                        prettyPrint(response);
+                        object1 = JSON.parse(response);
+                        prettyPrint();
                     } else {
                         console.log("Status error: " + ajaxRequest.status);
                     }
