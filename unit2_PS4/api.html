@@ -52,7 +52,7 @@
             obj = JSON.parse(text);
             let name = obj.name;
             let countries = obj.country;
-            $.each(data, function(key, value) {
+            $.each(obj, function(key, value) {
                 nat = key.country.country_id;
                 prob = key.country.probability;
                 for (let i = 0; i < nat.length; i++) {
