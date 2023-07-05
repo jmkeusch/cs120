@@ -78,8 +78,8 @@
                         console.log("File successfully loaded");
                         document.getElementById('return1').innerHTML = ajaxRequest.responseText;
                         response = ajaxRequest.responseText;
-                        str = JSON.stringify(response);
-                        object1 = JSON.parse(str);
+                        //str = JSON.stringify(response);
+                        object1 = JSON.parse(response);
                         console.log("JSON parsed");
                         prettyPrint();
                     } else {
