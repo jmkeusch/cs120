@@ -41,7 +41,7 @@
             <i>Disclaimer: This API provides probabilities based on emprical data and recommendations in any real-world application would be suggestive at best.</i> 
             <br><br>
             This API could potentially be used in a forensics or law enforcement database for determining information about someone's background if their name is known. <br>
-            It could perhaps also be used by an HR department in an HR Information System to gauge diversity or national origin if it is not explicitly collected. 
+            It could also be used by an HR department in an HR Information System to gauge diversity or national origin if it is not explicitly collected. Similar APIs predicting the probable gender of an individual based on their name are also used to determine gender gaps in analytics use cases. 
         </div>
 
     <script language="javascript">
@@ -73,7 +73,7 @@
             for (let i = 0; i < nats.length; i++) {
                 let nat = nats[i].country_id;
                 let nation = getNation(nat);
-                let prob = Number(nats[i].probability) * 100;
+                let prob = (Number(nats[i].probability) * 100).toFixed(2);
                 //console.log("Country: " + nat + " Prob: " + prob);
                 document.getElementById(p).innerHTML +=
                     prob + "% " + nation + "<br>";
