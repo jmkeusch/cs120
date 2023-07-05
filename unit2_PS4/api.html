@@ -58,7 +58,8 @@
             document.getElementById("return1").innerHTML += "Name: " + name + "<br>";
             for (let i = 0; i < nats.length; i++) {
                 let nat = nats[i].country_id;
-                console.log("Country: " + nat);
+                let prob = nats[i].probability;
+                console.log("Country: " + nat + "Prob: " + prob + "<br>");
             }
         }
 
