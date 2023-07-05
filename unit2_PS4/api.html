@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <title>Unit 3 | PS4 |  APIs</title>
   </head>
   <body>
     <div id="description">
-    <H1>Unit 3 PS4 API: Nationality Guesser</H1>
+    <H1>Unit 3 PS4 API: Name Origin Guesser</H1>
     <br><br>
         <form>
             <p>Enter a name to view the the probability of nationality!</p>
@@ -39,7 +41,8 @@
             It could perhaps also be used by an HR department in an HR Information System to gauge diversity or national origin if it is not explicitly collected. 
         </div>
 
-    <script>
+    <script language="javascript">
+        $
         function getNats() {
             var ajaxRequest = new XMLHttpRequest();
             ajaxRequest.onreadystatechange = function() {
@@ -55,7 +58,8 @@
                     console.log("Error retrieving data.");
                 }
             }
-            ajaxRequest.open('GET',)
+            ajaxRequest.open('GET',"https://api.nationalize.io");
+            ajaxRequest.send();
         }
     </script>
   </body>
