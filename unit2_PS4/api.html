@@ -70,8 +70,11 @@
                 }
             }
             let name = $('#name').val();
+            if (name == "") {
+                name = " ";
+            }
             console.log(name + " entered");
-            ajaxRequest.open('GET',"https://api.nationalize.io?name=" + "michael");
+            ajaxRequest.open('GET',"https://api.nationalize.io?name=" + name);
             ajaxRequest.send();
         }
 
