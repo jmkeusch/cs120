@@ -51,14 +51,19 @@
         function prettyPrint(text) {
             obj = JSON.parse(text);
             let name = obj.name;
-            let countries = obj.country;
-            $.each(obj, function(key, value) {
-                nat = key.country.country_id;
-                prob = key.country.probability;
-                for (let i = 0; i < nat.length; i++) {
-                    document.getElementById('return1').innerHTML += nat + " " + prob + "<br>";
-                }
-            })
+            let nats = obj.country;
+            let nat = nats.country_id.value;
+            let prob = nats.probability.value;
+            for (let i = 0; i < nats.length; i++) {
+                document.getElementById("return1").innterHTML += nat + " " + prob + "<br>";
+            }
+            // $.each(obj, function(key, value) {
+            //     nat = key.country.country_id;
+            //     prob = key.country.probability;
+            //     for (let i = 0; i < nat.length; i++) {
+            //         document.getElementById('return1').innerHTML += nat + " " + prob + "<br>";
+            //     }
+            // })
         }
 
         function getNats() {
