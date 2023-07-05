@@ -36,7 +36,7 @@
 
         <h2>API Applications</h2>
             <i>Disclaimer: This API provides probabilities based on emprical data and recommendations in any real-world application would be suggestive at best.</i> 
-            <br>
+            <br><br>
             This API could potentially be used in a forensics or law enforcement database for determining information about someone's background if their name is known. 
             It could perhaps also be used by an HR department in an HR Information System to gauge diversity or national origin if it is not explicitly collected. 
         </div>
@@ -57,8 +57,8 @@
                     console.log("Error retrieving data.");
                 }
             }
-            let name = $('#name').val();
-            console.log(name + " entered");
+            // let name = $('#name').val();
+            // console.log(name + " entered");
             ajaxRequest.open('GET',"https://api.nationalize.io?name=");
             ajaxRequest.send();
         }
@@ -66,7 +66,9 @@
         window.onload=function() {
             btnObj = document.getElementById('call');
             btnObj.onclick = () => {
-                document.getElementById('output').innerHTML = getNats();
+                //document.getElementById('output').innerHTML = getNats();
+                let name = $('#name').val();
+                document.getElementById("output").innerHTML = name;
             }
         }
 
@@ -74,7 +76,6 @@
         // $("button:#call").click(function () {
         //     $("name").html($('input:textbox').val());
         // });
-
     </script>
   </body>
 </html>
