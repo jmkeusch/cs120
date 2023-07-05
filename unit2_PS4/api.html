@@ -57,9 +57,12 @@
             }
         }
 
-        function prettyPrint(object, div) {
-            let p = div.toString();
-            p = ( '#p' ).val();
+        function prettyPrint(object) {
+            if (object == "object1") {
+                p = "p1";
+            } else {
+                p = "p2";
+            }
             console.log("Designated p is " + p);
             let name = object.name;
             let nats = object.country;
@@ -93,7 +96,7 @@
                         //str = JSON.stringify(response);
                         object1 = JSON.parse(response);
                         console.log("JSON parsed from AJAX");
-                        prettyPrint(object1, p1);
+                        prettyPrint(object1);
                     } else {
                         console.log("Status error: " + ajaxRequest.status);
                     }
@@ -121,7 +124,7 @@
             })
             .then(response => response.text())
             .then(response => {
-                prettyPrint(response, p2);
+                //prettyPrint(response);
                 console.log(JSON.stringify(response))
             })
         }
