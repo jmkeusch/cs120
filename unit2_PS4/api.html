@@ -4,12 +4,19 @@
     <title>Unit 3 | PS4 |  APIs</title>
   </head>
   <body>
-    <div id="apiReturn">
-
-    </div>
     <div id="description">
     <H1>Unit 3 PS4 API: Nationality Guesser</H1>
     <br><br>
+        <form>
+            <p>Enter a name to view the the probability of nationality!</p>
+            <label id="name" name="name">Name:</label>
+                <input type="text">
+            <input type="button" id="call" name="call" value="Go">
+        </form>
+        <div id="apiReturn">
+
+        </div>
+        
         <h2>API Description</h2>
         <p>
             This is an API that provides the probablity an individual is from a specific country based on their name passed as a parameter. 
@@ -25,13 +32,6 @@
                 name="first" (e.g., https://api.nationalize.io?name=maria)
             </p>
 
-        <form>
-            <p>Enter a name to view the the probability of nationality!</p>
-            <label id="name" name="name">Name:</label>
-                <input type="text">
-            <input type="button" id="call" name="call" value="Go">
-        </form>
-
         <h2>API Applications</h2>
             <i>Disclaimer: Acknowledging diversity of names and their orthography provides probabilities based on emprical data and recommendations in any real-world application would be suggestive at best.</i> 
             <br>
@@ -40,6 +40,23 @@
         </div>
 
     <script>
+        function getNats() {
+            var ajaxRequest = new XMLHttpRequest();
+            ajaxRequest.onreadystatechange = function() {
+                if (ajaxRequest.readyState == 1) {
+                    console.log("Established server connection.");
+                } else if (ajaxRequest.readyState == 2) {
+                    console.log("Request received by server.");
+                } else if (ajaxRequest.readyState == 3) {
+                    console.log("Processing request...");
+                } else if (ajaxrequest.readyState == 4) {
+                    console.log("Done loading.");
+                } else {
+                    console.log("Error retrieving data.");
+                }
+            }
+            ajaxRequest.open('GET',)
+        }
     </script>
   </body>
 </html>
