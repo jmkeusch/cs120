@@ -15,7 +15,7 @@
                 <input type="text" id="name" name="name">
             <input type="button" id="api1" name="api1" value="Go">
         </form>
-        <div id="return"></div> <br>
+        <div id="return1"></div> <br>
         <h2>API Description</h2>
         <p>
             This is an API that provides the probablity an individual is from a specific country based on their name passed as a parameter. 
@@ -48,6 +48,19 @@
             }
         }
 
+        function prettyPrint(text) {
+            obj = JSON.parse(text);
+            let name = value.name;
+            let countries = value.country;
+            object.forEach(function(key) {
+                nat = key.country.country_id;
+                prob = key.country.probability;
+                for (let i = 0; i < nat.length; i++) {
+                    document.getElementById('return1').innerHTML += nat + " " + prob + "<br>";
+                }
+            })
+        }
+
         function getNats() {
             var ajaxRequest = new XMLHttpRequest();
             ajaxRequest.onreadystatechange = function() {
@@ -61,7 +74,9 @@
                     console.log("Request complete");
                     if (ajaxRequest.status == 200) {
                         console.log("File successfully loaded");
-                        document.getElementById('return').innerHTML = ajaxRequest.responseText;
+                        document.getElementById('return1').innerHTML = ajaxRequest.responseText;
+                        response = ajaxRequest.responseText;
+                        prettyPrint(response);
                     } else {
                         console.log("Status error: " + ajaxRequest.status);
                     }
