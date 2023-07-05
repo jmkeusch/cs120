@@ -12,13 +12,10 @@
         <form>
             <p>Enter a name to view the the probability of nationality!</p>
             <label id="name" name="name">Name:</label>
-                <input type="text" id="name">
-            <input type="button" id="call" name="call" value="Go">
+                <input type="text" id="name" name="name">
+            <input type="button" id="api1" name="api1" value="Go">
         </form>
-        <div id="apiReturn">
-
-        </div>
-        
+        <div id="return"></div> <br>
         <h2>API Description</h2>
         <p>
             This is an API that provides the probablity an individual is from a specific country based on their name passed as a parameter. 
@@ -42,6 +39,15 @@
         </div>
 
     <script language="javascript">
+        window.onload=function() {
+            btnObj = document.getElementById("api1");
+            btnObj.onclick = () => {
+                //document.getElementById('output').innerHTML = getNats();
+                let name = $("#name").val();
+                document.getElementById("return").innerHTML = name;
+            }
+        }
+
         function getNats() {
             var ajaxRequest = new XMLHttpRequest();
             ajaxRequest.onreadystatechange = function() {
@@ -59,17 +65,8 @@
             }
             // let name = $('#name').val();
             // console.log(name + " entered");
-            ajaxRequest.open('GET',"https://api.nationalize.io?name=");
+            ajaxRequest.open('GET',"https://api.nationalize.io?name=" + "michael");
             ajaxRequest.send();
-        }
-
-        window.onload=function() {
-            btnObj = document.getElementById('call');
-            btnObj.onclick = () => {
-                //document.getElementById('output').innerHTML = getNats();
-                let name = $('#name').val();
-                document.getElementById("apiReturn").innerHTML = name;
-            }
         }
 
 
