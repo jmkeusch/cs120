@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <title>Unit 3 | PS4 |  APIs</title>
+    <title>Unit 3 | PS4 | APIs</title>
   </head>
   <body>
     <div id="description">
@@ -42,7 +42,6 @@
         </div>
 
     <script language="javascript">
-        $
         function getNats() {
             var ajaxRequest = new XMLHttpRequest();
             ajaxRequest.onreadystatechange = function() {
@@ -58,13 +57,23 @@
                     console.log("Error retrieving data.");
                 }
             }
-            ajaxRequest.open('GET',"https://api.nationalize.io");
+            let name = $('#name').val();
+            console.log(name + " entered");
+            ajaxRequest.open('GET',"https://api.nationalize.io?name=" + name);
             ajaxRequest.send();
         }
 
-        $("button:#call").click(function () {
-            $("name").html($('input:textbox').val());
-        });
+        window.onload=function() {
+            btnObj = document.getElementById('call');
+            btnObj.onclick = () => {
+                document.getElementById('output').innerHTML = getNats();
+            }
+        }
+
+
+        // $("button:#call").click(function () {
+        //     $("name").html($('input:textbox').val());
+        // });
 
     </script>
   </body>
