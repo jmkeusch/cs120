@@ -42,9 +42,9 @@
         window.onload=function() {
             btnObj = document.getElementById("api1");
             btnObj.onclick = () => {
-                //document.getElementById('output').innerHTML = getNats();
-                let name = $("#name").val();
-                document.getElementById("return").innerHTML = name;
+                document.getElementById('output').innerHTML = getNats();
+                //let name = $("#name").val();
+                //document.getElementById("return").innerHTML = name;
             }
         }
 
@@ -63,16 +63,12 @@
                     console.log("Error retrieving data.");
                 }
             }
-            // let name = $('#name').val();
-            // console.log(name + " entered");
+            let name = $('#name').val();
+            console.log(name + " entered");
             ajaxRequest.open('GET',"https://api.nationalize.io?name=" + "michael");
             ajaxRequest.send();
         }
 
-
-        // $("button:#call").click(function () {
-        //     $("name").html($('input:textbox').val());
-        // });
     </script>
   </body>
 </html>
