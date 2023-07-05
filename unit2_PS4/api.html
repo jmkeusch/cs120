@@ -54,11 +54,12 @@
         function prettyPrint() {
             let name = object1.name;
             let nats = object1.country;
-            let nat = nats.country_id;
-            let prob = nats.probability;
+            document.getElementById("return1").innerHTML = "";
             document.getElementById("return1").innerHTML += "Name: " + name + "<br>";
             for (let i = 0; i < nats.length; i++) {
-                document.getElementById("return1").innterHTML += nats.nat[i] + " " + nats.prob[i] + "<br>";
+                let nat = nats[i].country_id;
+                let prob = nats[i].probability;
+                document.getElementById("return1").innterHTML += nat + " " + prob + "<br>";
             }
         }
 
