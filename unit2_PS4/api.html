@@ -98,7 +98,7 @@
                         //str = JSON.stringify(response);
                         object1 = JSON.parse(response);
                         console.log("JSON parsed from AJAX");
-                        prettyPrint(object1);
+                        prettyPrint(object1, p1);
                     } else {
                         console.log("Status error: " + ajaxRequest.status);
                     }
@@ -126,7 +126,7 @@
             })
             .then(response => response.text())
             .then(response => {
-                prettyPrint(response);
+                prettyPrint(response, p2);
                 console.log(JSON.stringify(response));
             })
         }
