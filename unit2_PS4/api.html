@@ -15,8 +15,12 @@
                 <input type="text" id="name" name="name">
             <input type="button" id="api1" name="api1" value="Go">
         </form>
-        <div id="return1"></div> <br>
-        <div id="return2"></div> <br>
+        <div id="return1">
+            <h3>AJAX Return</h3>
+        </div> <br>
+        <div id="return2">
+            <h3>Fetch Return</h3>
+        </div> <br>
         <h2>API Description</h2>
         <p>
             This is an API that provides the probablity an individual is from a specific country based on their name passed as a parameter. 
@@ -51,9 +55,9 @@
             }
         }
 
-        function prettyPrint() {
-            let name = object1.name;
-            let nats = object1.country;
+        function prettyPrint(object) {
+            let name = object.name;
+            let nats = object.country;
             document.getElementById("return1").innerHTML = "";
             document.getElementById("return1").innerHTML += "Name: " + name + "<br>";
             for (let i = 0; i < nats.length; i++) {
@@ -61,7 +65,7 @@
                 let prob = nats[i].probability;
                 //console.log("Country: " + nat + " Prob: " + prob);
                 document.getElementById("return1").innerHTML +=
-                    "Country: " + nat + "Probability: " + prob + "<br>";
+                    "Country: " + nat + " Probability: " + prob + "<br>";
             }
         }
 
@@ -82,8 +86,8 @@
                         response = ajaxRequest.responseText;
                         //str = JSON.stringify(response);
                         object1 = JSON.parse(response);
-                        console.log("JSON parsed");
-                        prettyPrint();
+                        console.log("JSON parsed from AJAX");
+                        prettyPrint(object1);
                     } else {
                         console.log("Status error: " + ajaxRequest.status);
                     }
