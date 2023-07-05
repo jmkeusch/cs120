@@ -50,8 +50,8 @@
 
         function prettyPrint(text) {
             obj = JSON.parse(text);
-            let name = value.name;
-            let countries = value.country;
+            let name = obj.name;
+            let countries = obj.country;
             object.forEach(function(key) {
                 nat = key.country.country_id;
                 prob = key.country.probability;
