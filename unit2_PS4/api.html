@@ -21,6 +21,7 @@
         </div> <br>
         <div id="return2">
             <h3>Fetch Return</h3>
+            <p id="p2"></p>
         </div> <br>
         <h2>API Description</h2>
         <p>
@@ -40,7 +41,7 @@
         <h2>API Applications</h2>
             <i>Disclaimer: This API provides probabilities based on emprical data and recommendations in any real-world application would be suggestive at best.</i> 
             <br><br>
-            This API could potentially be used in a forensics or law enforcement database for determining information about someone's background if their name is known. 
+            This API could potentially be used in a forensics or law enforcement database for determining information about someone's background if their name is known. <br>
             It could perhaps also be used by an HR department in an HR Information System to gauge diversity or national origin if it is not explicitly collected. 
         </div>
 
@@ -70,6 +71,7 @@
             }
         }
 
+        //AJAX retrieve JSON method
         function getNats() {
             var ajaxRequest = new XMLHttpRequest();
             ajaxRequest.onreadystatechange = function() {
@@ -103,6 +105,22 @@
             console.log(name + " entered");
             ajaxRequest.open('GET',"https://api.nationalize.io?name=" + name);
             ajaxRequest.send();
+        }
+
+        //JavaScript fetch method
+        function fetchNats() {
+            let name = $('#name').val();
+            fetch("https://api.nationalize.io?name=" + name, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                },
+            })
+            .then(response => response.text())
+            .then(response => {
+                prettyPrint(response);
+                console.log(JSON.stringify(response))
+            })
         }
 
     </script>
