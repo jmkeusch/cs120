@@ -57,9 +57,8 @@
             document.getElementById("return1").innerHTML = "";
             document.getElementById("return1").innerHTML += "Name: " + name + "<br>";
             for (let i = 0; i < nats.length; i++) {
-                let nat = nats.country_id[i];
-                let prob = nats.probability[i];
-                document.getElementById("return1").innterHTML += nat + " " + prob + "<br>";
+                let nat = nats[i].country_id.value;
+                console.log("Country: " + nat);
             }
         }
 
