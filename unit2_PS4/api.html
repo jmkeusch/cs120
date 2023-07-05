@@ -68,15 +68,15 @@
             console.log("Designated p is " + p);
             let name = object.name;
             let nats = object.country;
-        
-            document.getElementById(p).innerHTML += "Name: " + name + "<br>";
+            
+            document.getElementById(p).innerHTML = "Name: " + name + "<br>";
             for (let i = 0; i < nats.length; i++) {
                 let nat = nats[i].country_id;
                 let nation = getNation(nat);
-                let prob = nats[i].probability;
+                let prob = Number(nats[i].probability) * 100;
                 //console.log("Country: " + nat + " Prob: " + prob);
                 document.getElementById(p).innerHTML +=
-                    "Country: " + nation + " Probability: " + prob + "<br>";
+                    prob + "% " + nation + "<br>";
             }
         }
 
