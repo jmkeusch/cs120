@@ -1,4 +1,4 @@
-alert("Word is " + WORD);
+
 
 
 //Global Variables
@@ -9,6 +9,8 @@ let ANS = [];
 let GUESS = "";
 let pGUESS = [];
 let WIN = false;
+
+alert("Word is " + WORD);
 
 
 window.onload = function() {
