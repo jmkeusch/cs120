@@ -23,10 +23,12 @@ function getWord() {
             'Accept': 'application/json',
         }
     })
-    .then(response => response.text());
-    WORD = response;
-    ANS = WORD.split();
-    document.write("Word is " + WORD);
+    .then(response => response.text())
+    .then(response => {
+        WORD = response;
+        ANS = WORD.split();
+        alert("Word is " + WORD);
+    })
 }
 
 //TODO: Begin Round -- use while loop
