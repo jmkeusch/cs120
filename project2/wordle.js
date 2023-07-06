@@ -13,6 +13,7 @@ let WIN = false;
 
 window.onload = function() {
     WORD = getWord();
+    alert("Word is " + WORD);
 }
 
 //TODO: Call API to get word onload
@@ -26,9 +27,8 @@ function getWord() {
     .then(response => response.text())
     .then(response => {
         WORD = response;
-        ANS = WORD.split();
-        alert("Word is " + WORD);
     })
+    return WORD;
 }
 
 //TODO: Begin Round -- use while loop
