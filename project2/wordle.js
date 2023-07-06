@@ -1,4 +1,4 @@
-document.write("Hello");
+alert("Word is " + WORD);
 
 
 //Global Variables
