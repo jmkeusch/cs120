@@ -26,6 +26,7 @@ function getWord() {
     .then(response => response.text());
     WORD = response;
     ANS = WORD.split();
+    alert("word is " + WORD);
 }
 
 //TODO: Begin Round -- use while loop
