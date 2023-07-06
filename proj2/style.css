@@ -1,0 +1,38 @@
+/*CSS Document*/
+
+html * {
+    font-family: "Roboto", sans-serif;
+  }
+
+table {
+    border-spacing: 6px;
+}
+
+td {
+    border: solid;
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    padding: 2px;
+    font-size: 90px;
+    text-align: center;
+}
+
+form {
+    margin-top: 30px;
+    margin-left: 50px;
+    font-size: 25px;
+}
+
+#board {
+    width: 30%;
+    margin-left: 50px;
+    margin-right: 30px;
+    text-align: center;
+}
+
+/*Guessed/* 
+
+/*Right letter wrong space (yellow)*/
+
+/*Right letter right space (green)*/
