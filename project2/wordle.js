@@ -6,6 +6,7 @@ let MAXROUNDS = Number(5);
 let OBJ = new Object;
 let CHECK = new Object;
 let WORD = "";
+let isVAL = true;
 let ANS = [];
 let INV = [];
 let GUESS = "";
@@ -23,59 +24,46 @@ window.onload = function getWord() {
     fetch(url)
         .then((response) => response.json())
         .then((data) => {
-            //console.log(data)
             const strObj = JSON.stringify(data);
-            //console.log("STR OBJ: " + data[0]);
             WORD = data[0];
             console.log("The word is " + WORD);
-            //return data[0];
-            //OBJ = JSON.parse(strObj);
         })
         .catch(err => console.log(err)) 
 }
 
-function checkGuess() {
-    guess = GUESS.toLowerCase();
-    let isValid = true;
-    url = "https://api.dictionaryapi.dev/api/v2/entries/en/" + guess;
+async function checkGuess() {
+    let guess = GUESS.toLowerCase();
+    url = "https://api.api-ninjas.com/v1/dictionary?word=" + guess;
 
         fetch(url, {
             method: 'GET',
             headers: {
+                'X-Api-Key': 'YLebFpb2Hmjvt69bAM4W1Q==5oLhmWtakZMlf08Y',
                 'Accept': 'application/json',
             },
         })
-            .then((response) => response.text())
-            .then((response) => {
-                const str = JSON.stringify(response);
-                //console.log("str is " + str);
-                CHECK = JSON.parse(str);
-                //console.log("check is " + CHECK);
+            .then((response) => response.json())
+            .then((data) => {
+                console.log("Validity: " + data.valid);
+                isVAL = data.valid;
+                console.log("Setting isVAL to " + isVAL);
             })
-            .catch(err => {
-                return false;
-            })
-    return isValid;
 }
 
-// async function assignWord() {
-//     //WORD = await getWord();
-//     console.log("In assignWord");
-//     WORD = await getWord();
-//     console.log("The word is " + WORD);
-//     ANS = WORD.split();
-// }
+async function validateWord() {
+    isVAL = await checkGuess();
+}
 
+//Event Handlers
 guessBtn.onclick = () => {
     processGuess();
 }
 
 newGameBtn.onclick = () => {
-    console.log("newGame Button clicked");
     startNewGame();
 }
 
-//Submit guess on enter key
+//Event Listener: Submit guess word on enter key
 var input = document.getElementById("input1");
 input.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
@@ -86,39 +74,39 @@ input.addEventListener("keypress", function(event) {
 
 //Process submitted guess word
 function processGuess() {
+    validateWord();
     ANS = WORD.split("");
-    INV = ANS;
-    console.log("INV is " + INV);
     //Get guess value
     GUESS = $("#input1").val();
 
-    //VALIDATION
-    //Ensure guess is 5 chars
     if (GUESS.length != 5) {
         alert("You must guess a 5-letter word!");
         GUESS = "";
         document.getElementById('form1').reset();
         return;
     }
+
     //check if dictionary word
-    if (!checkGuess()) {
-        alert("Please enter a valid word.");
+    
+    console.log("isVal in main is " + isVAL);
+    if(isVAL === false) {
+        alert("Please enter a real word.");
         GUESS = "";
         document.getElementById('form1').reset();
         return;
-    };
+    }
 
+    //Inv used to track placement/presense of letters in word
+    INV = ANS;
+    
     //Clear input
-    input.value = "";
+    document.getElementById('form1').reset();
 
     //Uppercase guess word
     GUESS = GUESS.toUpperCase();
-    console.log("Guess is " + GUESS);
     //Parse
     arrGuess = GUESS.split("");
-    console.log("arrGuess is " + arrGuess);
     //COMPARE WORDS
-
     //Exact word --> Game won
     if (GUESS === WORD) {
         document.getElementById("row"+ROUND).className = "correct";
@@ -138,17 +126,23 @@ function processGuess() {
             //Matched letter and placement-->Mark green
             if (item === ANS[index]) {
                 cell.className = "correct";
-              //No match-->Just add letter to board
-            } else if (item != ANS[index]) {
-                foundIndex = ANS.findIndex(function (item1) {
-                    return item1 === item;
-                }) //Matched letter, wrong placement-->Mark yellow (Green cells takes precedence)
-                if (foundIndex != (-1) && (cell.className != "correct")) {
-                    console.log("Foundindex is " + foundIndex);
-                    cell.className = "present";
+                INV[index] = "0";
+            } 
+        })
+        arrGuess.forEach(function (item, index) {
+            cell = document.getElementById("c"+ROUND+index);
+            if (cell.className != "correct") {
+                if (item != ANS[index]) {
+                    foundIndex = ANS.findIndex(function (item1) {
+                        return item1 === item;
+                    }) //Matched letter, wrong placement-->Mark yellow (Green cells takes precedence)
+                    if (foundIndex != (-1) && (cell.className != "correct")) {
+                        INV[foundIndex] = "0";
+                        cell.className = "present";
+                    }
                 }
             }
-        }) 
+        })
     }
     //Increment round to next row and guess attempt
     ROUND++;
