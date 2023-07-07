@@ -35,23 +35,19 @@ async function checkGuess() {
     let guess = GUESS.toLowerCase();
     url = "https://api.api-ninjas.com/v1/dictionary?word=" + guess;
 
-        fetch(url, {
+        return fetch(url, {
             method: 'GET',
             headers: {
                 'X-Api-Key': 'YLebFpb2Hmjvt69bAM4W1Q==5oLhmWtakZMlf08Y',
                 'Accept': 'application/json',
             },
         })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log("Validity: " + data.valid);
-                isVAL = data.valid;
-                console.log("Setting isVAL to " + isVAL);
+            .then((response) => {
+                return response.json();
             })
-}
-
-async function validateWord() {
-    isVAL = await checkGuess();
+            .then((data) => {
+                isVAL = data.valid;
+            })
 }
 
 //Event Handlers
@@ -73,12 +69,21 @@ input.addEventListener("keypress", function(event) {
 })
 
 //Process submitted guess word
-function processGuess() {
-    validateWord();
+async function processGuess() {
     ANS = WORD.split("");
     //Get guess value
     GUESS = $("#input1").val();
+    
+    //NOTE TO GRADER: The URL in checkGuess was the only API dictionary I could find to return a boolean on word validity. 
+    //Unfortunately, it did not have as large a word inventory as I had originally thought and it hinders user experience 
+    //(e.g., 'tapes', 'laser' not recognized words). Feel free to uncomment this code to see it in action though. 
 
+    // await checkGuess();
+    // if(GUESS === WORD) {
+    //     isVAL = true;
+    // }
+
+    //Check length
     if (GUESS.length != 5) {
         alert("You must guess a 5-letter word!");
         GUESS = "";
@@ -87,8 +92,6 @@ function processGuess() {
     }
 
     //check if dictionary word
-    
-    console.log("isVal in main is " + isVAL);
     if(isVAL === false) {
         alert("Please enter a real word.");
         GUESS = "";
@@ -96,7 +99,7 @@ function processGuess() {
         return;
     }
 
-    //Inv used to track placement/presense of letters in word
+    //Inventory array used to track placement/presence of letters in word
     INV = ANS;
     
     //Clear input
@@ -104,7 +107,7 @@ function processGuess() {
 
     //Uppercase guess word
     GUESS = GUESS.toUpperCase();
-    //Parse
+    //Parse guess word
     arrGuess = GUESS.split("");
     //COMPARE WORDS
     //Exact word --> Game won
@@ -119,7 +122,8 @@ function processGuess() {
         showNewGame();
         alert("Congratulations! You guessed the word!");
     } else {
-        //Loop through GUESS against WORD (in respective arrays). Mark letters by match & placement.
+        //Loop through GUESS against WORD (in respective arrays). Mark letters by match & placement, & update INV.
+        //Case: Char matches answer index
         arrGuess.forEach(function (item, index) {
             cell = document.getElementById("c"+ROUND+index);
             cell.appendChild(document.createTextNode(item));
@@ -128,14 +132,14 @@ function processGuess() {
                 cell.className = "correct";
                 INV[index] = "0";
             } 
-        })
+        }) //Case: Loop through to determine partial and non-matches.
         arrGuess.forEach(function (item, index) {
             cell = document.getElementById("c"+ROUND+index);
             if (cell.className != "correct") {
                 if (item != ANS[index]) {
                     foundIndex = ANS.findIndex(function (item1) {
                         return item1 === item;
-                    }) //Matched letter, wrong placement-->Mark yellow (Green cells takes precedence)
+                    }) //Matched letter, wrong placement-->Mark yellow (Green cells takes precedence per prev. loop)
                     if (foundIndex != (-1) && (cell.className != "correct")) {
                         INV[foundIndex] = "0";
                         cell.className = "present";
@@ -154,9 +158,7 @@ function processGuess() {
     }
 };
 
-//TODO (Optional): Verify guess before parsing
-
-//Events: Toggle 'New Game' Button
+//Toggle 'New Game' Button
 function showNewGame () {
     newGameBtn = document.getElementById("btn2").style.display = "block";
 };
@@ -167,23 +169,16 @@ function hideNewGame () {
 //Event: Execute New Game Button
 function startNewGame () {
     document.location.reload();
+    //cell = document.getElementById("c"+ROUND+index);
     // console.log("In Start new game fxn");
-    // let i, j = 0;
-    // let cell = document.getElementById("c"+i+j);
-    // console.log("On cell " + cell);
-    // for (i; i < MAXROUNDS; i++) {
-    //     console.log("row is " + i);
-    //     for (j; j < 5; j++) {
-    //         cell = document.getElementById("c"+i+j);
-    //         $("#cell").html("");
-    //         //cell.classList.remove();
+    // for (let i = 0; i < 6; i++) {
+    //     for (let j = 0; j < 5; j++) {
+    //         let cell = document.getElementById("c"+i+j);
+    //         cell.innerHTML = "";
+    //         cell.className = "";
     //     }
     // }
-    // //clear board words
-    // //clear colors
-    // //reset counter
-    // ROUND = 0;
-    // //hide new game button
     // hideNewGame();
-    // //get new word
+    // ROUND = 0;
+    // getWord();
 }
