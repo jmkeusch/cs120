@@ -6,6 +6,7 @@ html * {
 
 table {
     border-spacing: 6px;
+    /*need flex to it isn't smushed*/
 }
 
 td {
@@ -31,8 +32,12 @@ form {
     text-align: center;
 }
 
-/*Guessed/* 
-
 /*Right letter wrong space (yellow)*/
+.correct {
+    background-color: #7BC73F;
+}
 
 /*Right letter right space (green)*/
+.present {
+    background-color: #FADB7C;
+}
