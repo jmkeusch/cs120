@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    
-
   <title>Project 2 | Wordle</title>
 </head>
 <body>
     <div id="board">
-        <h1>Welcome to Wordle</h1>
+        <h1>Welcome to Wordle!</h1>
         <table>
             <tr id="row0">
                 <td id="c00"></td>
@@ -57,13 +56,19 @@
     </div>
 
     <div id="ui">
+        <!--Form Start-->
         <form id="form1" name="form1">
+            <!--Input Word-->
             <label name="label1" id="label1">Enter your guess word: 
                 <input type="text" id="input1" name="input1">
-            </label>
-            <br>
+            </label> <br>
+
+            <div id="btnDiv">
+            <!--Guess Button-->
             <input type="button" id="btn1" name="btn1" value="Guess">
+            <!--New Game Button-->
             <input type="button" id="btn2" name="btn2" style="display:none" value="New Game">
+            </div>
         </form>
     </div>
     <script type="text/javascript" src="/project2/wordle.js"></script>
