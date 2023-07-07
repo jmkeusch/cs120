@@ -11,7 +11,7 @@ body {
 
 table {
     border-spacing: 6px;
-    width: 100%;
+    width: 90%;
 }
 
 td, tr {
@@ -100,17 +100,18 @@ form {
     }
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 2000px) {
     table {
         width: 100%;
+        max-width: 80%
     }
     #board {
-        max-width:90%;
-        width: 100%;
+        max-width:80%;
+        width: 70%;
         margin-right:4px;
     }
     #ui {
-       width: 100%;
+       width: 80%;
     }
     #input1 {
         max-width: 90%;
