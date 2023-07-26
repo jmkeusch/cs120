@@ -10,7 +10,7 @@
 	echo "This is created using PHP echo. <br />";
 ?>
 <br/><br/>
-<em>Can you tell the difference?</em><br/>
+<em>Can you tell the difference? </em><br/>
 	
 </body>
 </html>
