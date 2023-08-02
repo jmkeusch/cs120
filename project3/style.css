@@ -1,8 +1,9 @@
 /*Color Palette
-blue: #012D56
-red: #810129
-white: #FFFFFF
-purple: #531B50
+dark teal: #29698C
+powder blue: #7DD1FF
+brown: #8C5B1B
+turquoise: #1FADDC
+amber: #DBB50F
 */
 
 html * {
@@ -53,7 +54,7 @@ h3 {
     display:block;
     width:100%;
     height:5rem;
-    background-color:#012D56;
+    background-color:#29698C;
     color:#FFFFFF;
     border:solid;
 }
@@ -85,7 +86,7 @@ h3 {
     bottom:0;
     height:1.5rem;
     width:100%;
-    background-color:#32394D;
+    background-color:#29698C;
     color:#FFFFFF;
     text-align:center;
     margin-top:100px;
