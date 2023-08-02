@@ -35,6 +35,7 @@ html * {
 
 h1 {
     color:#FFFFFF;
+    float:left;
 }
 
 h2 {
