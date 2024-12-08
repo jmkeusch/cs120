@@ -20,26 +20,12 @@
             color: #fff;
             padding: 10px 20px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
         }
 
         header h1 {
             margin: 0;
             font-size: 1.5em;
-        }
-
-        nav a {
-            color: #fff;
-            margin-right: 10px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-
-        nav a img {
-            width: 20px;
-            margin-right: 5px;
         }
 
         /* Main content area */
@@ -80,7 +66,7 @@
             background-color: #343541;
             padding: 10px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 10px;
             position: sticky;
             bottom: 0;
@@ -95,6 +81,9 @@
             resize: none;
             box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
             transition: box-shadow 0.2s ease;
+            min-height: 50px;
+            max-height: 200px;
+            overflow-y: auto;
         }
 
         .input-bar textarea:focus {
@@ -124,11 +113,18 @@
 
         .parameter-input {
             max-width: 80px;
+            margin-bottom: 5px;
         }
 
         .parameter-label {
             font-size: 0.8em;
             color: #ccc;
+            margin-bottom: 3px;
+        }
+
+        .description {
+            font-size: 0.75em;
+            color: #bbb;
         }
 
         .loading:after {
@@ -143,53 +139,38 @@
             100% { content: '...'; }
         }
 
-        .description {
-            font-size: 0.9em;
-            color: #bbb;
-            margin-top: -10px;
-            text-align: left;
-        }
-
     </style>
 </head>
 <body>
     <header>
         <h1>Proxy LLM Comparator</h1>
-        <nav>
-            <a href="#">
-                <img src="home-icon.svg" alt="Home"> Home
-            </a>
-            <a href="#">
-                <img src="settings-icon.svg" alt="Settings"> Settings
-            </a>
-        </nav>
     </header>
     <div class="main-container">
         <div class="response-container">
             <div class="response-box" id="gpt4-response">
                 <strong>GPT-4 Response</strong>
-                <div id="gpt4-content" class="loading">...</div>
+                <div id="gpt4-content">Waiting for response...</div>
             </div>
             <div class="response-box" id="claude-response">
                 <strong>Claude Response</strong>
-                <div id="claude-content" class="loading">...</div>
+                <div id="claude-content">Waiting for response...</div>
             </div>
             <div class="response-box" id="phi-response">
                 <strong>Microsoft Phi Response</strong>
-                <div id="phi-content" class="loading">...</div>
+                <div id="phi-content">Waiting for response...</div>
             </div>
         </div>
     </div>
     <div class="input-bar">
         <textarea id="prompt" rows="2" placeholder="Send a message..."></textarea>
         <div>
-            <input id="lastk" class="parameter-input" type="number" value="5" placeholder="Last K">
             <div class="parameter-label">Last K</div>
+            <input id="lastk" class="parameter-input" type="number" value="5">
             <div class="description">Determines how far back the model considers context.</div>
         </div>
         <div>
-            <input id="temperature" class="parameter-input" type="number" step="0.1" value="0.1" placeholder="Temperature">
             <div class="parameter-label">Temperature</div>
+            <input id="temperature" class="parameter-input" type="number" step="0.1" value="0.1">
             <div class="description">Controls response randomness (0.1 for focused, 1.0 for creative).</div>
         </div>
         <button onclick="generateResponse()">Generate</button>
@@ -199,6 +180,14 @@
     <script>
         async function generateResponse() {
             try {
+                // Show loading ellipses
+                document.getElementById("gpt4-content").classList.add("loading");
+                document.getElementById("gpt4-content").innerText = "";
+                document.getElementById("claude-content").classList.add("loading");
+                document.getElementById("claude-content").innerText = "";
+                document.getElementById("phi-content").classList.add("loading");
+                document.getElementById("phi-content").innerText = "";
+
                 const prompt = document.getElementById("prompt").value;
                 const lastk = document.getElementById("lastk").value;
                 const temperature = document.getElementById("temperature").value;
@@ -215,19 +204,31 @@
 
                 const results = await response.json();
 
+                document.getElementById("gpt4-content").classList.remove("loading");
                 document.getElementById("gpt4-content").innerText = results.gpt4 || "No response";
+
+                document.getElementById("claude-content").classList.remove("loading");
                 document.getElementById("claude-content").innerText = results.claude || "No response";
+
+                document.getElementById("phi-content").classList.remove("loading");
                 document.getElementById("phi-content").innerText = results.phi || "No response";
             } catch (error) {
                 alert("Error: " + error.message);
+                clearResponses();
             }
         }
 
         function clearResponses() {
+            document.getElementById("gpt4-content").classList.remove("loading");
             document.getElementById("gpt4-content").innerText = "Waiting for response...";
+
+            document.getElementById("claude-content").classList.remove("loading");
             document.getElementById("claude-content").innerText = "Waiting for response...";
+
+            document.getElementById("phi-content").classList.remove("loading");
             document.getElementById("phi-content").innerText = "Waiting for response...";
         }
     </script>
 </body>
 </html>
+
